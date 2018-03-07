@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/SPDClimaticPrediction/SPDClimaticPrediction.iml" filepath="$PROJECT_DIR$/SPDClimaticPrediction/SPDClimaticPrediction.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WMCommon/WMCommon.iml" filepath="$PROJECT_DIR$/WMCommon/WMCommon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WMUser/WMUser.iml" filepath="$PROJECT_DIR$/WMUser/WMUser.iml" />
+      <module fileurl="file://$PROJECT_DIR$/webapp/webapp.iml" filepath="$PROJECT_DIR$/webapp/webapp.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,1354 @@
+{
+	"queryAvgTem": {
+		"unit": "摄氏度",
+		"range": {
+			"para": [
+				"startTime",
+				"endTime",
+				"contrastType",
+				"contrastStartTime",
+				"contrastEndTime"
+			],
+			"cols": [{
+				"title": "站号",
+				"data": "station_Id_C"
+			}, {
+				"title": "站名",
+				"data": "station_Name"
+			}, {
+				"title": "地区",
+				"data": "area"
+			}, {
+				"type": "numeric",
+				"format": "0.0",
+				"title": "平均气温",
+				"data": "tEM_Avg"
+			}, {
+				"type": "numeric",
+				"format": "0.0",
+				"title": "时段值",
+				"data": "contrastTMP_Avg"
+			}, {
+				"type": "numeric",
+				"format": "0.0",
+				"title": "距平",
+				"data": "anomaly"
+			}],
+			"avg": [3, 4, 5],
+			"map": [{
+				"value": "tEM_Avg",
+				"name": "平均气温"
+			}, {
+				"value": "contrastTMP_Avg",
+				"name": "时段值"
+			}, {
+				"value": "anomaly",
+				"name": "距平",
+				"style": {
+					"type": "auto",
+					"option": {
+						"colorType": "cw"
+					}
+				}
+			}]
+		},
+		"sameTeam": {
+			"para": [
+				"startTime",
+				"endTime",
+				"contrastType",
+				"startYear",
+				"endYear"
+			],
+			"cols": [{
+				"title": "站号",
+				"data": "station_Id_C"
+			}, {
+				"title": "站名",
+				"data": "station_Name"
+			}, {
+				"title": "地区",
+				"data": "area"
+			}, {
+				"type": "numeric",
+				"format": "0.0",
+				"title": "平均气温",
+				"data": "tEM_Avg"
+			}, {
+				"type": "numeric",
+				"format": "0.0",
+				"title": "多年均值",
+				"data": "contrastTMP_Avg"
+			}, {
+				"type": "numeric",
+				"format": "0.0",
+				"title": "距平",
+				"data": "anomaly"
+			}],
+			"avg": [3, 4, 5],
+			"map": [{
+				"value": "tEM_Avg",
+				"name": "平均气温"
+			}, {
+				"value": "contrastTMP_Avg",
+				"name": "多年均值"
+			}, {
+				"value": "anomaly",
+				"name": "距平",
+				"style": {
+					"type": "auto",
+					"option": {
+						"colorType": "cw"
+					}
+				}
+			}]
+		}
+	},
+	"queryAvgTemMax": {
+		"unit": "摄氏度",
+		"range": {
+			"para": [
+				"startTime",
+				"endTime",
+				"contrastType",
+				"contrastStartTime",
+				"contrastEndTime"
+			],
+			"cols": [{
+				"title": "站号",
+				"data": "station_Id_C"
+			}, {
+				"title": "站名",
+				"data": "station_Name"
+			}, {
+				"title": "地区",
+				"data": "area"
+			}, {
+				"type": "numeric",
+				"format": "0.0",
+				"title": "高温均值",
+				"data": "tEM_Max"
+			}, {
+				"type": "numeric",
+				"format": "0.0",
+				"title": "时段值",
+				"data": "contrastTEM_Max"
+			}, {
+				"type": "numeric",
+				"format": "0.0",
+				"title": "距平",
+				"data": "anomaly"
+			}],
+			"avg": [3, 4, 5],
+			"map": [{
+				"value": "tEM_Max",
+				"name": "高温均值"
+			}, {
+				"value": "contrastTEM_Max",
+				"name": "时段值"
+			}, {
+				"value": "anomaly",
+				"name": "距平",
+				"style": {
+					"type": "auto",
+					"option": {
+						"colorType": "cw"
+					}
+				}
+			}]
+		},
+		"sameTeam": {
+			"para": [
+				"startTime",
+				"endTime",
+				"contrastType",
+				"startYear",
+				"endYear"
+			],
+			"cols": [{
+				"title": "站号",
+				"data": "station_Id_C"
+			}, {
+				"title": "站名",
+				"data": "station_Name"
+			}, {
+				"title": "地区",
+				"data": "area"
+			}, {
+				"type": "numeric",
+				"format": "0.0",
+				"title": "高温均值",
+				"data": "tEM_Max"
+			}, {
+				"type": "numeric",
+				"format": "0.0",
+				"title": "多年均值",
+				"data": "contrastTEM_Max"
+			}, {
+				"type": "numeric",
+				"format": "0.0",
+				"title": "距平",
+				"data": "anomaly"
+			}],
+			"avg": [3, 4, 5],
+			"map": [{
+				"value": "tEM_Max",
+				"name": "高温均值"
+			}, {
+				"value": "contrastTEM_Max",
+				"name": "多年均值"
+			}, {
+				"value": "anomaly",
+				"name": "距平",
+				"style": {
+					"type": "auto",
+					"option": {
+						"colorType": "cw"
+					}
+				}
+			}]
+		}
+	},
+	"queryAvgTemMin": {
+		"unit": "摄氏度",
+		"range": {
+			"para": [
+				"startTime",
+				"endTime",
+				"contrastType",
+				"contrastStartTime",
+				"contrastEndTime"
+			],
+			"cols": [{
+				"title": "站号",
+				"data": "station_Id_C"
+			}, {
+				"title": "站名",
+				"data": "station_Name"
+			}, {
+				"title": "地区",
+				"data": "area"
+			}, {
+				"type": "numeric",
+				"format": "0.0",
+				"title": "低温均值",
+				"data": "tEM_Min"
+			}, {
+				"type": "numeric",
+				"format": "0.0",
+				"title": "时段值",
+				"data": "contrastTEM_Min"
+			}, {
+				"type": "numeric",
+				"format": "0.0",
+				"title": "距平",
+				"data": "anomaly"
+			}],
+			"avg": [3, 4, 5],
+			"map": [{
+				"value": "tEM_Min",
+				"name": "低温均值"
+			}, {
+				"value": "contrastTEM_Min",
+				"name": "时段值"
+			}, {
+				"value": "anomaly",
+				"name": "距平",
+				"style": {
+					"type": "auto",
+					"option": {
+						"colorType": "cw"
+					}
+				}
+			}]
+		},
+		"sameTeam": {
+			"para": [
+				"startTime",
+				"endTime",
+				"contrastType",
+				"startYear",
+				"endYear"
+			],
+			"cols": [{
+				"title": "站号",
+				"data": "station_Id_C"
+			}, {
+				"title": "站名",
+				"data": "station_Name"
+			}, {
+				"title": "地区",
+				"data": "area"
+			}, {
+				"type": "numeric",
+				"format": "0.0",
+				"title": "低温均值",
+				"data": "tEM_Min"
+			}, {
+				"type": "numeric",
+				"format": "0.0",
+				"title": "多年均值",
+				"data": "contrastTEM_Min"
+			}, {
+				"type": "numeric",
+				"format": "0.0",
+				"title": "距平",
+				"data": "anomaly"
+			}],
+			"avg": [3, 4, 5],
+			"map": [{
+				"value": "tEM_Min",
+				"name": "低温均值"
+			}, {
+				"value": "contrastTEM_Min",
+				"name": "多年均值"
+			}, {
+				"value": "anomaly",
+				"name": "距平",
+				"style": {
+					"type": "auto",
+					"option": {
+						"colorType": "cw"
+					}
+				}
+			}]
+		}
+	},
+	"queryPreSum": {
+		"uint": "毫米",
+		"range": {
+			"para": [
+				"startTime",
+				"endTime",
+				"type",
+				"contrastType",
+				"contrastStartTime",
+				"contrastEndTime"
+			],
+			"cols": [{
+				"title": "站号",
+				"data": "station_Id_C"
+			}, {
+				"title": "站名",
+				"data": "station_Name"
+			}, {
+				"title": "地区",
+				"data": "area"
+			}, {
+				"type": "numeric",
+				"format": "0.0",
+				"title": "降水总量",
+				"data": "pRE_Time"
+			}, {
+				"type": "numeric",
+				"format": "0.0",
+				"title": "时段值",
+				"data": "contrastPRE_Time"
+			}, {
+				"type": "numeric",
+				"format": "0.0",
+				"title": "距平",
+				"data": "anomaly"
+			}, {
+				"type": "numeric",
+				"format": "0.0",
+				"title": "距平率",
+				"data": "anomalyRate"
+			}],
+			"avg": [3, 4, 5, 6],
+			"map": [{
+				"value": "pRE_Time",
+				"name": "降水总量"
+			}, {
+				"value": "contrastPRE_Time",
+				"name": "时段值"
+			}, {
+				"value": "anomaly",
+				"name": "距平",
+				"style": {
+					"type": "auto",
+					"option": {
+						"colorType": "wc"
+					}
+				}
+			}, {
+				"value": "anomalyRate",
+				"name": "距平率",
+				"style": {
+					"type": "auto",
+					"option": {
+						"colorType": "wc"
+					}
+				}
+			}]
+		},
+		"sameTeam": {
+			"para": [
+				"startTime",
+				"endTime",
+				"type",
+				"contrastType",
+				"startYear",
+				"endYear"
+			],
+			"cols": [{
+				"title": "站号",
+				"data": "station_Id_C"
+			}, {
+				"title": "站名",
+				"data": "station_Name"
+			}, {
+				"title": "地区",
+				"data": "area"
+			}, {
+				"type": "numeric",
+				"format": "0.0",
+				"title": "降水总量",
+				"data": "pRE_Time"
+			}, {
+				"type": "numeric",
+				"format": "0.0",
+				"title": "多年均值",
+				"data": "contrastPRE_Time"
+			}, {
+				"type": "numeric",
+				"format": "0.0",
+				"title": "距平",
+				"data": "anomaly"
+			}, {
+				"type": "numeric",
+				"format": "0.0",
+				"title": "距平率",
+				"data": "anomalyRate"
+			}],
+			"avg": [3, 4, 5, 6],
+			"map": [{
+				"value": "pRE_Time",
+				"name": "降水总量"
+			}, {
+				"value": "contrastPRE_Time",
+				"name": "多年均值"
+			}, {
+				"value": "anomaly",
+				"name": "距平",
+				"style": {
+					"type": "auto",
+					"option": {
+						"colorType": "wc"
+					}
+				}
+			}, {
+				"value": "anomalyRate",
+				"name": "距平率",
+				"style": {
+					"type": "auto",
+					"option": {
+						"colorType": "wc"
+					}
+				}
+			}]
+		}
+	},
+	"querySSH": {
+		"range": {
+			"para": [
+				"startTime",
+				"endTime",
+				"contrastType",
+				"contrastStartTime",
+				"contrastEndTime"
+			],
+			"cols": [{
+				"title": "站号",
+				"data": "station_Id_C"
+			}, {
+				"title": "站名",
+				"data": "station_Name"
+			}, {
+				"title": "地区",
+				"data": "area"
+			}, {
+				"type": "numeric",
+				"title": "日照时数",
+				"data": "sSH"
+			}, {
+				"type": "numeric",
+				"format": "0.0",
+				"title": "时段值",
+				"data": "contrastSSH"
+			}, {
+				"type": "numeric",
+				"format": "0.0",
+				"title": "距平",
+				"data": "anomaly"
+			}, {
+				"type": "numeric",
+				"format": "0.0",
+				"title": "距平率",
+				"data": "anomalyRate"
+			}, {
+				"type": "numeric",
+				"format": "0.0",
+				"title": "日照百分率",
+				"data": "sshRate"
+			}],
+			"avg": [3, 4, 5, 6, 7],
+			"map": [{
+				"value": "sSH",
+				"name": "日照时数"
+			}, {
+				"value": "contrastSSH",
+				"name": "时段值"
+			}, {
+				"value": "anomaly",
+				"name": "距平",
+				"style": {
+					"type": "auto",
+					"option": {
+						"colorType": "cw"
+					}
+				}
+			}, {
+				"value": "anomalyRate",
+				"name": "距平率",
+				"style": {
+					"type": "auto",
+					"option": {
+						"colorType": "cw"
+					}
+				}
+			}, {
+				"value": "sshRate",
+				"name": "日照百分率",
+				"style": {
+					"type": "auto",
+					"option": {
+						"colorType": "cw"
+					}
+				}
+			}]
+		},
+		"sameTeam": {
+			"para": [
+				"startTime",
+				"endTime",
+				"contrastType",
+				"startYear",
+				"endYear"
+			],
+			"cols": [{
+				"title": "站号",
+				"data": "station_Id_C"
+			}, {
+				"title": "站名",
+				"data": "station_Name"
+			}, {
+				"title": "地区",
+				"data": "area"
+			}, {
+				"type": "numeric",
+				"title": "日照时数",
+				"data": "sSH"
+			}, {
+				"type": "numeric",
+				"format": "0.0",
+				"title": "多年均值",
+				"data": "contrastSSH"
+			}, {
+				"type": "numeric",
+				"format": "0.0",
+				"title": "距平",
+				"data": "anomaly"
+			}, {
+				"type": "numeric",
+				"format": "0.0",
+				"title": "距平率",
+				"data": "anomalyRate"
+			}, {
+				"type": "numeric",
+				"format": "0.0",
+				"title": "日照百分率",
+				"data": "sshRate"
+			}],
+			"avg": [3, 4, 5, 6, 7],
+			"map": [{
+				"value": "sSH",
+				"name": "日照时数"
+			}, {
+				"value": "contrastSSH",
+				"name": "多年均值"
+			}, {
+				"value": "anomaly",
+				"name": "距平",
+				"style": {
+					"type": "auto",
+					"option": {
+						"colorType": "cw"
+					}
+				}
+			}, {
+				"value": "anomalyRate",
+				"name": "距平率",
+				"style": {
+					"type": "auto",
+					"option": {
+						"colorType": "cw"
+					}
+				}
+			}, {
+				"value": "sshRate",
+				"name": "日照百分率",
+				"style": {
+					"type": "auto",
+					"option": {
+						"colorType": "cw"
+					}
+				}
+			}]
+		}
+	},
+	"queryRHU": {
+		"range": {
+			"para": [
+				"startTime",
+				"endTime",
+				"contrastType",
+				"contrastStartTime",
+				"contrastEndTime"
+			],
+			"cols": [{
+				"title": "站号",
+				"data": "station_Id_C"
+			}, {
+				"title": "站名",
+				"data": "station_Name"
+			}, {
+				"title": "地区",
+				"data": "area"
+			}, {
+				"type": "numeric",
+				"format": "0.0",
+				"title": "相对湿度",
+				"data": "rHU_Avg"
+			}, {
+				"type": "numeric",
+				"format": "0.0",
+				"title": "时段值",
+				"data": "contrastRHU_Avg"
+			}, {
+				"type": "numeric",
+				"format": "0.0",
+				"title": "距平",
+				"data": "anomaly"
+			}],
+			"avg": [3, 4, 5],
+			"map": [{
+				"value": "rHU_Avg",
+				"name": "相对湿度"
+			}, {
+				"value": "contrastRHU_Avg",
+				"name": "时段值"
+			}, {
+				"value": "anomaly",
+				"name": "距平",
+				"style": {
+					"type": "auto",
+					"option": {
+						"colorType": "wc"
+					}
+				}
+			}]
+		},
+		"sameTeam": {
+			"para": [
+				"startTime",
+				"endTime",
+				"contrastType",
+				"startYear",
+				"endYear"
+			],
+			"cols": [{
+				"title": "站号",
+				"data": "station_Id_C"
+			}, {
+				"title": "站名",
+				"data": "station_Name"
+			}, {
+				"type": "numeric",
+				"format": "0.0",
+				"title": "地区",
+				"data": "area"
+			}, {
+				"type": "numeric",
+				"format": "0.0",
+				"title": "相对湿度",
+				"data": "rHU_Avg"
+			}, {
+				"type": "numeric",
+				"format": "0.0",
+				"title": "多年均值",
+				"data": "contrastRHU_Avg"
+			}, {
+				"type": "numeric",
+				"format": "0.0",
+				"title": "距平",
+				"data": "anomaly"
+			}],
+			"avg": [3, 4, 5],
+			"map": [{
+				"value": "rHU_Avg",
+				"name": "相对湿度"
+			}, {
+				"value": "contrastRHU_Avg",
+				"name": "多年均值"
+			}, {
+				"value": "anomaly",
+				"name": "距平",
+				"style": {
+					"type": "auto",
+					"option": {
+						"colorType": "wc"
+					}
+				}
+			}]
+		}
+	},
+	"queryExtTmp": {
+		"unit": "摄氏度",
+		"para": [
+			"startTime",
+			"endTime"
+		],
+		"cols": [{
+			"title": "站号",
+			"data": "station_Id_C"
+		}, {
+			"title": "站名",
+			"data": "station_Name"
+		}, {
+			"title": "地区",
+			"data": "area"
+		}, {
+			"type": "numeric",
+			"format": "0.0",
+			"title": "极端高温",
+			"data": "tEM_Max"
+		}, {
+			"title": "高温日期",
+			"data": "tEM_Max_OTime"
+		}, {
+			"type": "numeric",
+			"format": "0.0",
+			"title": "极端低温",
+			"data": "tEM_Min"
+		}, {
+			"title": "低温日期",
+			"data": "tEM_Min_OTime"
+		}],
+		"avg": [3, 5],
+		"map": [{
+			"value": "tEM_Max",
+			"name": "极端高温"
+		}, {
+			"value": "tEM_Max_OTime",
+			"name": "高温日期"
+		}, {
+			"value": "tEM_Min",
+			"name": "极端低温"
+		}, {
+			"value": "tEM_Min_OTime",
+			"name": "低温日期"
+		}]
+	},
+	"queryWin_s_2mi_avg": {
+		"range": {
+			"name": "queryWin_s_2mi_avg",
+			"para": [
+				"startTime",
+				"endTime",
+				"contrastType",
+				"contrastStartTime",
+				"contrastEndTime"
+			],
+			"cols": [{
+				"title": "站号",
+				"data": "station_Id_C"
+			}, {
+				"title": "站名",
+				"data": "station_Name"
+			}, {
+				"title": "地区",
+				"data": "area"
+			}, {
+				"type": "numeric",
+				"format": "0.0",
+				"title": "平均风速",
+				"data": "wIN_S_2mi_Avg"
+			}, {
+				"type": "numeric",
+				"format": "0.0",
+				"title": "时段值",
+				"data": "contrastWIN_S_2mi_Avg"
+			}, {
+				"type": "numeric",
+				"format": "0.0",
+				"title": "距平",
+				"data": "anomaly"
+			}],
+			"avg": [3, 4, 5],
+			"map": [{
+				"value": "wIN_S_2mi_Avg",
+				"name": "平均风速"
+			}, {
+				"value": "contrastWIN_S_2mi_Avg",
+				"name": "时段值"
+			}, {
+				"value": "anomaly",
+				"name": "距平",
+				"style": {
+					"type": "auto",
+					"option": {
+						"colorType": "cw"
+					}
+				}
+			}]
+		},
+		"sameTeam": {
+			"para": [
+				"startTime",
+				"endTime",
+				"contrastType",
+				"startYear",
+				"endYear"
+			],
+			"cols": [{
+				"title": "站号",
+				"data": "station_Id_C"
+			}, {
+				"title": "站名",
+				"data": "station_Name"
+			}, {
+				"title": "地区",
+				"data": "area"
+			}, {
+				"type": "numeric",
+				"format": "0.0",
+				"title": "平均风速",
+				"data": "wIN_S_2mi_Avg"
+			}, {
+				"type": "numeric",
+				"format": "0.0",
+				"title": "多年均值",
+				"data": "contrastWIN_S_2mi_Avg"
+			}, {
+				"type": "numeric",
+				"format": "0.0",
+				"title": "距平",
+				"data": "anomaly"
+			}],
+			"avg": [3, 4, 5],
+			"map": [{
+				"value": "wIN_S_2mi_Avg",
+				"name": "平均风速"
+			}, {
+				"value": "contrastWIN_S_2mi_Avg",
+				"name": "多年均值"
+			}, {
+				"value": "anomaly",
+				"name": "距平",
+				"style": {
+					"type": "auto",
+					"option": {
+						"colorType": "cw"
+					}
+				}
+			}]
+		}
+	},
+	"queryPreCnt": {
+		"range": {
+			"name": "queryPreCnt",
+			"para": [
+				"startTime",
+				"endTime",
+				"contrastType",
+				"contrastStartTime",
+				"contrastEndTime"
+			],
+			"cols": [{
+				"title": "站号",
+				"data": "station_Id_C"
+			}, {
+				"title": "站名",
+				"data": "station_Name"
+			}, {
+				"title": "地区",
+				"data": "area"
+			}, {
+				"type": "numeric",
+				"title": "降水日数",
+				"data": "cnt"
+			}, {
+				"type": "numeric",
+				"format": "0.0",
+				"title": "时段值",
+				"data": "contrastCnt"
+			}, {
+				"type": "numeric",
+				"format": "0.0",
+				"title": "距平",
+				"data": "anomaly"
+			}, {
+				"type": "numeric",
+				"title": "25.0~49.9",
+				"data": "get25lt50cnt"
+			}, {
+				"type": "numeric",
+				"title": "50.0~100.0",
+				"data": "get50lt100cnt"
+			}, {
+				"type": "numeric",
+				"title": ">=100.0",
+				"data": "get100"
+			}],
+			"avg": [3, 5, 6, 7, 8],
+			"map": [{
+				"value": "cnt",
+				"name": "降水日数"
+			}, {
+				"value": "contrastCnt",
+				"name": "时段值"
+			}, {
+				"value": "anomaly",
+				"name": "距平",
+				"style": {
+					"type": "auto",
+					"option": {
+						"colorType": "cw"
+					}
+				}
+			}, {
+				"value": "get25lt50cnt",
+				"name": "25.0~49.9"
+			}, {
+				"value": "get50lt100cnt",
+				"name": "50.0~99.9"
+			}, {
+				"value": "get100",
+				"name": ">=100.0"
+			}]
+		},
+		"sameTeam": {
+			"para": [
+				"startTime",
+				"endTime",
+				"contrastType",
+				"startYear",
+				"endYear"
+			],
+			"cols": [{
+				"title": "站号",
+				"data": "station_Id_C"
+			}, {
+				"title": "站名",
+				"data": "station_Name"
+			}, {
+				"title": "地区",
+				"data": "area"
+			}, {
+				"type": "numeric",
+				"title": "降水日数",
+				"data": "cnt"
+			}, {
+				"type": "numeric",
+				"format": "0.0",
+				"title": "多年均值",
+				"data": "contrastCnt"
+			}, {
+				"type": "numeric",
+				"format": "0.0",
+				"title": "距平",
+				"data": "anomaly"
+			}, {
+				"type": "numeric",
+				"title": "25.0~49.9",
+				"data": "get25lt50cnt"
+			}, {
+				"type": "numeric",
+				"title": "50.0~99.9",
+				"data": "get50lt100cnt"
+			}, {
+				"type": "numeric",
+				"title": ">=100.0",
+				"data": "get100"
+			}],
+			"avg": [3, 4, 5, 6, 7, 8],
+			"map": [{
+				"value": "cnt",
+				"name": "降水日数"
+			}, {
+				"value": "contrastCnt",
+				"name": "多年均值"
+			}, {
+				"value": "anomaly",
+				"name": "距平",
+				"style": {
+					"type": "auto",
+					"option": {
+						"colorType": "cw"
+					}
+				}
+			}, {
+				"value": "get25lt50cnt",
+				"name": "25.0~49.9"
+			}, {
+				"value": "get50lt100cnt",
+				"name": "50.0~99.9"
+			}, {
+				"value": "get100",
+				"name": ">=100.0"
+			}]
+		}
+	},
+	"queryPrsAvg": {
+		"range": {
+			"para": [
+				"startTime",
+				"endTime",
+				"contrastType",
+				"contrastStartTime",
+				"contrastEndTime"
+			],
+			"cols": [{
+				"title": "站号",
+				"data": "station_Id_C"
+			}, {
+				"title": "站名",
+				"data": "station_Name"
+			}, {
+				"title": "地区",
+				"data": "area"
+			}, {
+				"type": "numeric",
+				"format": "0.0",
+				"title": "平均气压",
+				"data": "pRS_Avg"
+			}, {
+				"type": "numeric",
+				"format": "0.0",
+				"title": "时段值",
+				"data": "contrastPRS_Avg"
+			}, {
+				"type": "numeric",
+				"format": "0.0",
+				"title": "距平",
+				"data": "anomaly"
+			}],
+			"avg": [3, 4, 5],
+			"map": [{
+				"value": "pRS_Avg",
+				"name": "平均气压"
+			}, {
+				"value": "contrastPRS_Avg",
+				"name": "时段值"
+			}, {
+				"value": "anomaly",
+				"name": "距平",
+				"style": {
+					"type": "auto",
+					"option": {
+						"colorType": "cw"
+					}
+				}
+			}]
+		},
+		"sameTeam": {
+			"para": [
+				"startTime",
+				"endTime",
+				"contrastType",
+				"startYear",
+				"endYear"
+			],
+			"cols": [{
+				"title": "站号",
+				"data": "station_Id_C"
+			}, {
+				"title": "站名",
+				"data": "station_Name"
+			}, {
+				"title": "地区",
+				"data": "area"
+			}, {
+				"type": "numeric",
+				"format": "0.0",
+				"title": "平均气压",
+				"data": "pRS_Avg"
+			}, {
+				"type": "numeric",
+				"format": "0.0",
+				"title": "多年均值",
+				"data": "contrastPRS_Avg"
+			}, {
+				"type": "numeric",
+				"format": "0.0",
+				"title": "距平",
+				"data": "anomaly"
+			}],
+			"avg": [3, 4, 5],
+			"map": [{
+				"value": "pRS_Avg",
+				"name": "平均气压"
+			}, {
+				"value": "contrastPRS_Avg",
+				"name": "多年均值"
+			}, {
+				"value": "anomaly",
+				"name": "距平",
+				"style": {
+					"type": "auto",
+					"option": {
+						"colorType": "cw"
+					}
+				}
+			}]
+		}
+	},
+	"queryTmpMaxCnt": {
+		"para": [
+			"startTime",
+			"endTime"
+		],
+		"cols": [{
+			"title": "站号",
+			"data": "station_Id_C"
+		}, {
+			"title": "站名",
+			"data": "station_Name"
+		}, {
+			"title": "地区",
+			"data": "area"
+		}, {
+			"type": "numeric",
+			"title": ">=35°",
+			"data": "gte35"
+		}, {
+			"type": "numeric",
+			"title": "35°~36.9°",
+			"data": "gte35lt37"
+		}, {
+			"type": "numeric",
+			"title": ">=37°",
+			"data": "gte37"
+		}, {
+			"type": "numeric",
+			"title": "37~39.9°",
+			"data": "gte37lt40"
+		}, {
+			"type": "numeric",
+			"title": ">=40°",
+			"data": "gte40"
+		}],
+		"avg": [3, 4, 5, 6, 7],
+		"map": [{
+			"value": "gte35",
+			"name": ">=35°"
+		}, {
+			"value": "gte35lt37",
+			"name": "35°~36.9°"
+		}, {
+			"value": "gte37",
+			"name": ">=37°"
+		}, {
+			"value": "gte37lt40",
+			"name": "37~39.9°"
+		}, {
+			"value": "gte40",
+			"name": ">=40°"
+		}]
+	},
+	"queryVisMin": {
+		"para": [
+			"startTime",
+			"endTime"
+		],
+		"cols": [{
+			"title": "站号",
+			"data": "station_Id_C"
+		}, {
+			"title": "站名",
+			"data": "station_Name"
+		}, {
+			"title": "地区",
+			"data": "area"
+		}, {
+			"type": "numeric",
+			"format": "0.0",
+			"title": "最低能见度",
+			"data": "vIS_Min"
+		}, {
+			"title": "出现时间",
+			"data": "vIS_Min_OTime"
+		}],
+		"avg": [3],
+		"map": [{
+			"value": "vIS_Min",
+			"name": "最低能见度"
+		}, {
+			"value": "vIS_Min_OTime",
+			"name": "出现时间"
+		}]
+	},
+	"getTmpByTimes": {
+		"unit": "摄氏度",
+		"range": {
+			"para": [
+				"startTime",
+				"endTime",
+				"contrastType",
+				"startYear",
+				"endYear",
+				"contrastStartTime",
+				"contrastEndTime"
+			],
+			"cols": [{
+				"title": "站号",
+				"data": "station_Id_C"
+			}, {
+				"title": "站名",
+				"data": "station_Name"
+			}, {
+				"title": "地区",
+				"data": "area"
+			}, {
+				"type": "numeric",
+				"format": "0.0",
+				"title": "日较差",
+				"data": "tmpGap"
+			}, {
+				"type": "numeric",
+				"format": "0.0",
+				"title": "对比日较差值",
+				"data": "contrastTmpGap"
+			}, {
+				"type": "numeric",
+				"format": "0.0",
+				"title": "距平",
+				"data": "anomaly"
+			}],
+			"avg": [3, 4, 5, 6, 7],
+			"map": [{
+				"value": "tmpGap",
+				"name": "日较差"
+			}, {
+				"value": "contrastTmpGap",
+				"name": "对比日较差值"
+			}, {
+				"value": "anomaly",
+				"name": "距平",
+				"style": {
+					"type": "auto",
+					"option": {
+						"colorType": "wc"
+					}
+				}
+			}]
+		},
+		"sameTeam": {
+			"para": [
+				"startTime",
+				"endTime",
+				"contrastType",
+				"startYear",
+				"endYear"
+			],
+			"cols": [{
+				"title": "站号",
+				"data": "station_Id_C"
+			}, {
+				"title": "站名",
+				"data": "station_Name"
+			}, {
+				"title": "地区",
+				"data": "area"
+			}, {
+				"type": "numeric",
+				"format": "0.0",
+				"title": "日较差",
+				"data": "tmpGap"
+			}, {
+				"type": "numeric",
+				"format": "0.0",
+				"title": "对比日较差值",
+				"data": "contrastTmpGap"
+			}, {
+				"type": "numeric",
+				"format": "0.0",
+				"title": "距平",
+				"data": "anomaly"
+			}],
+			"avg": [3, 4, 5, 6, 7],
+			"map": [{
+				"value": "tmpGap",
+				"name": "日较差"
+			}, {
+				"value": "contrastTmpGap",
+				"name": "对比日较差值"
+			}, {
+				"value": "anomaly",
+				"name": "距平",
+				"style": {
+					"type": "auto",
+					"option": {
+						"colorType": "wc"
+					}
+				}
+			}]
+		}
+	},
+	"getTmpByYear": {
+		"unit": "摄氏度",
+		"para": [
+			"year"
+		],
+		"cols": [{
+			"title": "站号",
+			"data": "station_Id_C"
+		}, {
+			"title": "站名",
+			"data": "station_Name"
+		}, {
+			"title": "年份",
+			"type": "numeric",
+			"data": "year"
+		}, {
+			"title": "最大月份",
+			"type": "numeric",
+			"data": "maxMonth"
+		}, {
+			"title": "最小月份",
+			"type": "numeric",
+			"data": "minMonth"
+		}, {
+			"type": "numeric",
+			"format": "0.0",
+			"title": "最大月平均气温",
+			"data": "maxMonthAvgTmp"
+		}, {
+			"type": "numeric",
+			"format": "0.0",
+			"title": "最小月平均气温",
+			"data": "minMonthAvgTmp"
+		}, {
+			"type": "numeric",
+			"format": "0.0",
+			"title": "年较差",
+			"data": "monthTmpGap"
+		}],
+		"avg": [7],
+		"map": [{
+			"value": "monthTmpGap",
+			"name": "年较差"
+		}]
+	}
+}

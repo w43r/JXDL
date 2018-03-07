@@ -1,0 +1,89 @@
+/**
+ * custom-stationinput
+ * custom-stationpanel
+ * @author rexer
+ */
+
+.custom-stationinput {
+	font-size: 14px;
+	display: inline-block;
+	margin: 0 auto;
+	cursor: default;
+}
+
+.stationinput-input {
+	font-size: 14px;
+	line-height: 25px;
+	width: 100%;
+	height: 25px;
+	padding: 1px 4px;
+	-webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+	transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+	text-align: center;
+	vertical-align: middle;
+	color: #555;
+	border: solid 1px #9ac3f3;
+	border-radius: 4px;
+	background-color: #fff;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+}
+
+.stationinput-dropdown {
+	/*position: absolute;*/ /* FIX 滚动条插件造成位置偏移，取消绝对定位 */
+	z-index: 99999;
+	display: none;
+	margin: 0 auto;
+	padding: 0;
+	list-style-type: none;
+	border: 1px solid #9ac3f3;
+	border-top-width: 0;
+	background: #fff;
+	-webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+	box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+}
+
+.stationinput-dropdown li {
+	padding: 4px;
+	text-align: left;
+}
+
+.stationinput-dropdown li.active {
+	color: #fff;
+	background: #50c380;
+}
+
+
+/*customStationPanel*/
+
+.custom-stationpanel {
+	position: absolute;
+	z-index: 99999;
+	display: none;
+	width: 600px;
+	-webkit-box-shadow: 0 0 20px 1px #ccc;
+	-moz-box-shadow: 0 0 20px 1px #ccc;
+	box-shadow: 0 0 20px 1px #ccc;
+}
+
+.custom-stationpanel .content-region,
+.custom-stationpanel .content-station,
+.custom-stationpanel .content-ctrl {
+	width: 100%;
+	padding: 0;
+	text-align: center;
+}
+
+.custom-stationpanel .content-region,
+.custom-stationpanel .content-station {
+	margin-bottom: 10px;
+}
+
+.tpl-station {
+	overflow: hidden;
+	width: 100%;
+	text-overflow: ellipsis;
+}
+
+
+/*customStationPicker End*/

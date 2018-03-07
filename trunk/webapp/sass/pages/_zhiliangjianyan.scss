@@ -1,0 +1,24 @@
+.condition-content {
+  .condition-content-datebox {
+    margin-bottom: 10px;
+    input {
+      border: 1px solid #84cdff;
+      border-radius: 4px;
+      padding: 3px 6px;
+      text-align: center;
+    }
+  }
+}
+#condition {
+  .f {
+    margin-bottom: 5px;
+  }
+}
+.quality {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    flex: 1;
+  }
+}

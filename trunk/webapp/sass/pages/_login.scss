@@ -1,0 +1,226 @@
+/*!
+ * 登录页面样式 改版
+ * @author rexer
+ */
+
+// 变量
+$highlight:#fe9223;
+$highlight-heavy:#ff6f00;
+$highlight-alpha:rgba(254, 146, 35, .6);
+// image
+$img-background:url(./imgs/bg.jpg);
+$img-title:url(./imgs/title.png);
+$img-input:url(./imgs/input.gif);
+// size
+$login-width: 300px;
+// 标题预留高度
+$header-toTop: 100px;
+// 标题距离登录框
+$header-toLogin: 50px;
+@mixin full() {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+@mixin center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin z-depth-1 {
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+}
+
+@mixin z-depth-1-half {
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
+}
+
+@mixin z-depth-2 {
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+}
+
+body,
+html {
+    @include full();
+    min-width: 660px;
+}
+
+body {
+    font-family: 'Microsoft YaHei', 微软雅黑, SimSun, 宋体;
+    font-size: 14px;
+    background: $img-background no-repeat;
+    background-size: cover;
+}
+
+// font
+.f {
+    font-family: inherit;
+    letter-spacing: 3px;
+    color: #fff;
+    text-shadow: #000 0 0 3px;
+    user-select: none;
+}
+
+.btn {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.428571429;
+    display: inline-block;
+    margin-bottom: 0;
+    padding: 6px;
+    cursor: pointer;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    color: #fff;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    background-image: none;
+    user-select: none;
+    @include z-depth-2();
+    &:focus {
+        outline: thin dotted;
+        outline: 5px auto -webkit-focus-ring-color;
+        outline-offset: -2px;
+    }
+    &[disabled] {
+        cursor: not-allowed;
+        pointer-events: none;
+        opacity: .65;
+        color: #eee;
+        box-shadow: none;
+    }
+    // btn theme
+    &.btn-default {
+        background-color: $highlight;
+        &:hover,
+        &:focus {
+            background-color: $highlight-heavy;
+        }
+    }
+}
+
+header {
+    padding: $header-toTop 0 $header-toLogin;
+    text-align: center;
+    .title {
+        @include center();
+        width: 620px;
+        height: 218px;
+        user-select: none;
+        background: $img-title no-repeat;
+        background-size: cover;
+    }
+}
+
+// content
+.wrapper {
+    position: relative;
+    @include center();
+    width: 619px;
+    padding: 10px 0;
+    .inner {
+        width: 100%;
+        @include center();
+    }
+    .login-inner {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: $login-width;
+        height: auto;
+        .input-group {
+            //输入框组
+            input {
+                float: left;
+                display: block;
+                height: 24px;
+                width: calc(100% - 32px);
+                padding: 6px 0 6px 30px;
+                font-size: 14px;
+                line-height: 1.42857143;
+                background-color: #fff;
+                background-image: none;
+                border: 1px solid #455a64;
+                border-radius: 10px;
+                box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+                transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+                &:focus,
+                &:active {
+                    border-color: $highlight;
+                    outline: 0;
+                    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px $highlight-alpha;
+                }
+            }
+            .input-icon {
+                //输入框图标
+                height: 18px;
+                width: 18px;
+                background-image: $img-input;
+                background-repeat: no-repeat;
+                position: absolute;
+                margin-top: 10px;
+                margin-left: 6px;
+                &.user {
+                    background-position: 0px 0px;
+                }
+                &.pass {
+                    background-position: 0px -18px;
+                }
+            }
+        }
+        .login-btn {
+            //登录按钮
+            padding: 8px;
+            font-size: 16px;
+            letter-spacing: 6px;
+        }
+        .tip {
+            //提示信息
+            display: inline-block;
+            text-align: right;
+            width: 100%;
+            padding-top: 10px;
+            font-style: italic;
+            margin-right: 80px;
+            color: red;
+        }
+    }
+    .forgot {
+        letter-spacing: normal;
+        cursor: pointer;
+        text-decoration: none;
+        letter-spacing: normal;
+    }
+}
+
+// powerby
+footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    margin: 10px auto;
+    color: #eee;
+    font-size: 16px;
+    text-align: center;
+    .version {
+        display: inline-block;
+        margin-bottom: 16px;
+    }
+    .powerby {
+        a.by {
+            text-decoration: none;
+            &:active,
+            &:hover {
+                text-decoration: underline;
+            }
+            &:link,
+            &:visited {
+                color: #eee;
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="WMUser"
+  id="myeclipse.1449134135274"
+  context-root="/WMUser"
+  j2ee-spec="5.0"
+  archive="WMUser.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

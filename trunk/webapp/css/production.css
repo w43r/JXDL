@@ -1,0 +1,12 @@
+@charset "UTF-8";
+/*表格制度状态 覆盖样式*/
+.handsontable .htDimmed {
+    color: #333 !important;
+}
+
+
+/*产品弹出层*/
+.product-container {
+    margin-bottom: 20px;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInByb2R1Y3Rpb24uY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLGlCQUFpQjtBQUNqQixlQUFlO0FBQ2Y7SUFDSSx1QkFBdUI7Q0FDMUI7OztBQUdELFNBQVM7QUFDVDtJQUNJLG9CQUFvQjtDQUN2QiIsImZpbGUiOiJwcm9kdWN0aW9uLmNzcyIsInNvdXJjZXNDb250ZW50IjpbIkBjaGFyc2V0IFwiVVRGLThcIjtcbi8q6KGo5qC85Yi25bqm54q25oCBIOimhuebluagt+W8jyovXG4uaGFuZHNvbnRhYmxlIC5odERpbW1lZCB7XG4gICAgY29sb3I6ICMzMzMgIWltcG9ydGFudDtcbn1cblxuXG4vKuS6p+WTgeW8ueWHuuWxgiovXG4ucHJvZHVjdC1jb250YWluZXIge1xuICAgIG1hcmdpbi1ib3R0b206IDIwcHg7XG59XG4iXX0= */

@@ -1,0 +1,63 @@
+{
+  "name": "MIS",
+  "version": "1.0.0",
+  "description": "MIS for JiangXi",
+  "main": "index.js",
+  "scripts": {
+    "dev":"dev-server -c ./dev.conf.json --open",
+    "start": "start /b npm run dev & npm run sass",
+    "sass": "node-sass --watch --recursive --output-style compact --output css sass",
+    "build": "node-sass --output-style compact --output css sass && postcss \"css/*.css\" -u autoprefixer -d css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "rexer",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^7.2.5",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-minify": "^0.2.0",
+    "babel-preset-stage-2": "^6.24.1",
+    "cross-env": "^5.1.3",
+    "dev-server": "github:rexerwang/dev-server",
+    "node-sass": "^4.7.2",
+    "postcss-cli": "^4.1.1",
+    "rimraf": "^2.6.2"
+  },
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "modules": false,
+          "targets": {
+            "browsers": [
+              "> 1%",
+              "last 2 versions",
+              "not ie <= 8"
+            ]
+          }
+        }
+      ],
+      "stage-2"
+    ],
+    "env": {
+      "production": {
+        "presets": [
+          [
+            "minify",
+            {
+              "removeDebugger": true
+            }
+          ]
+        ]
+      },
+      "development": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}

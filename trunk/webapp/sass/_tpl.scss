@@ -1,0 +1,310 @@
+// @import 'variables';
+// @import 'helper';
+// @import 'mixins';
+@mixin title {
+  width: 100%;
+  display: inline-block;
+  font-size: 18px;
+  text-align: center;
+  line-height: 100%;
+  i.icon {
+    color: $color-theme;
+  }
+}
+
+/**
+ * 条件栏Panel
+ */
+
+.condition-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.tpl-condition {
+  font-size: 14px;
+  border-spacing: 5px;
+  border-collapse: separate; // overflow-x: hidden;
+  @at-root #condition-title {
+    @include title;
+    padding-bottom: 5px;
+  }
+  // overflow-y: auto;
+  .condition {
+    width: 100%; // text-align: center;
+    @include pane;
+    padding: 0;
+    margin-bottom: $condition-padding;
+  }
+  @at-root .condition-title {
+    font-size: 14px;
+    font-style: normal;
+    line-height: 30px;
+    display: inline-block;
+    width: 100%;
+    height: 30px;
+    padding: 0 10px;
+    margin-bottom: 5px;
+    font-weight: 600;
+    background-image: $gradientBlueLite;
+  }
+  @at-root .condition-content {
+    display: block;
+    width: 100%;
+    padding: $pane-padding;
+    text-align: center;
+    padding-top: $condition-padding; //单选|复选按钮: 每行3列
+    .tpl-radiobtn-item {
+      margin: 0 10px 5px 0;
+      width: calc((100% - #{2 * $condition-margin}) / 3); //($condition-width - 6 * $condition-margin - 2) / 3;
+      &:nth-child(3n),
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    // 时间插件
+    .query-time {
+      text-align: center; // Ctrl Button: 每行6列
+      .custom-datepicker.ctrl {
+        // @extend .tpl-radiobtn-item;
+        float: left;
+        margin: 0 5px 5px 0;
+        width: calc((100% - #{5 * $condition-padding}) / 6);
+        &:nth-child(6n) {
+          margin-right: 0;
+        }
+      }
+    }
+
+    // 独占
+    .line {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      &:last-child {
+        margin-right: auto;
+      }
+    }
+  }
+}
+
+/**
+ * 结果Panel
+ */
+
+.tpl-content {
+  // 工具栏
+  $toolbar-size: 30px;
+
+  margin: 0 5px;
+  @include pane;
+  .resultPanel {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background-color: $color-bg;
+  }
+  .content-toolbar {
+    display: flex;
+    align-items: center;
+    height: $toolbar-size;
+    padding: 0 10px;
+    background-image: $gradientBlueLite;
+    // prevent parent padding
+    margin: -#{$pane-padding} -#{$pane-padding} 0;
+
+    & + .resultPanel {
+      height: calc(100% - #{$toolbar-size});
+    }
+
+    .toolbar-item {
+      padding: 0 4px;
+      select, input {
+        border-radius: 4px;
+        border: none;
+      }
+      .title {
+        padding: 2px 10px;
+        background-color: #fbac56;
+        border-radius: 4px;
+        color: #fff;
+        box-shadow: 0 1px 1px 0 #b5b5b5;
+      }
+    }
+  }
+}
+
+.tpl-result-grid {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * 工具栏Panel
+ */
+
+.tpl-toolbar {
+  width: $toolbar-width;
+  height: 100%;
+  overflow-x: hidden; //超出隐藏
+  overflow-y: auto;
+  background: url(../imgs/toolbar.png) no-repeat;
+  background-position: 100% 100%;
+  .toolbar-title {
+    @include title;
+  }
+  @at-root .toolbar {
+    width: 100%;
+    display: flex;
+    flex-direction: column; // 子项
+    .tpl-toolbar-group {
+      @include pane;
+      width: 100%;
+      font-size: 14px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: $toolbar-padding auto;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      // 标题
+      .tpl-toolbar-title {
+        @extend .nonselect;
+        margin-bottom: $toolbar-padding;
+      }
+      .tpl-toolbar-item,
+      .tpl-btn {
+        width: 100%;
+        margin-bottom: $toolbar-padding;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+/**
+ * 指标
+ */
+
+.tpl-index-btn {
+  font-size: 1.2em;
+  color: #563d7c;
+}
+
+.tpl-index-item {
+  width: 100%;
+  margin: 5px auto;
+  padding-left: 5px;
+  text-align: left;
+}
+
+.index-item-title {
+  font-weight: 600;
+  display: inline-flex;
+  font-style: normal;
+}
+
+.index-item-content {
+  margin-left: 15px;
+}
+
+span.tpl-check {
+  font-size: 1.2em;
+  line-height: 1.2em;
+  vertical-align: middle;
+}
+
+/**
+ * 按钮
+ */
+
+.tpl-btn {
+  font-size: 14px;
+  height: 30px;
+  margin: 0 5px 5px;
+  padding: 2px 5px 2px 5px;
+  cursor: pointer;
+  color: #000;
+  border: none;
+  border-radius: 2px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden; // background-color: $color-btn-sm;
+  border: 1px solid;
+  border-radius: 4px;
+  background-color: #fff;
+
+  &:hover {
+    @extend .z-depth-1;
+  }
+  &.btn-default {
+    border-color: $color-btn;
+    &.active,
+    &:active,
+    &:hover {
+      color: $color-text-fn;
+      background-color: $color-btn-fn;
+    }
+  }
+  // 主题
+  &.btn-primary {
+    border-color: $color-btn-sm;
+    &.active,
+    &:active,
+    &:hover {
+      color: $color-text-fn;
+      background-color: $color-btn-sm-fn;
+    }
+  }
+  &.btn-success {
+    color: $color-text-fn;
+    background-color: $color-btn-sm-fn;
+    &:active {
+    }
+  }
+  &.btn-danger {
+    background-color: $color-btn-fn;
+    &:active {
+    }
+  }
+}
+
+/**
+ * tpl-radio
+ */
+
+.tpl-radio {
+  display: inline-block;
+}
+
+/**
+ * 分页器
+ */
+
+.R.pagination {
+  width: 100%;
+  input {
+    margin: 0;
+    height: 30px;
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+  }
+}
+
+/**
+ * grid-wrapper
+ */
+.grid-wrapper {
+  width: 100%;
+  height: 100%;
+}
+

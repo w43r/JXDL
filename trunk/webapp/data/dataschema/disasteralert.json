@@ -1,0 +1,38 @@
+{
+    "field": {
+        "type": "类型",
+        "HighTmp": "高温预警",
+        "LowTmp": "低温预警",
+        "ContinueRain": "连阴雨预警",
+        "id": "ID",
+        "Station_Id_C": "站号",
+        "Station_Name": "站名",
+        "StartTime": "开始时间",
+        "EndTime": "结束时间",
+        "SI": "单站高温指数",
+        "level": "等级",
+        "G": "单站高温G",
+        "ForecastDate": "预报时间",
+        "PersistHous": "持续候数",
+        "AvgTmp": "平均气温",
+        "Anomaly": "距平",
+        "ForecastDate": "预报时间",
+        "SumStations": "累计站点数",
+        "SumAnomaly": "累计气温距平",
+        "NoSunDays": "无日照日数",
+        "RainDays": "有雨日数",
+        "Levle": "程度",
+        "Pre": "降水量",
+        "SumPre": "累积雨量",
+        "PreDays": "累积有雨日数",
+        "RI": "区域高温指数",
+        "DI": "一次高温综合指数"
+    },
+    "sorts": ["StartTime", "EndTime", "Station_Id_C"],
+    "hides": ["id", "type", "ForecastDate"],
+    "color": {
+        "HighTmp": "info",
+        "LowTmp": "info",
+        "ContinueRain": "info"
+    }
+}

@@ -1,0 +1,66 @@
+[
+{
+  "id": "bm_001",
+  "name": "模式产品",
+  "title": "模式产品",
+  "icon": "icon-moshichanpin",
+  "url": "product.html",
+  "script": "js/pages/moshichanping.js"
+},
+{
+  "id": "bm_002",
+  "name": "数据浏览",
+  "title": "数据浏览",
+  "icon": "icon-shujuliulan",
+  "url": "product.html",
+  "script": "js/pages/shujuliulan.js"
+},
+{
+  "id": "bm_003",
+  "name": "格点预报",
+  "title": "格点预报",
+  "icon": "icon-gedianyubao",
+  "url": "product.html",
+  "script": "js/pages/gedianyubao.js"
+},
+{
+  "id": "bm_004",
+  "name": "过程预报",
+  "title": "过程预报",
+  "icon": "icon-guochengyubao",
+  "url": "product.html",
+  "script": "js/pages/guochengyubao.js"
+},
+{
+  "id": "bm_005",
+  "name": "解释应用",
+  "title": "解释应用",
+  "icon": "icon-jieshiyingyong",
+  "url": "product.html",
+  "script": "js/pages/jieshiyingyong.js"
+},
+{
+  "id": "bm_006",
+  "name": "产品制作",
+  "title": "产品制作发布",
+  "icon": "icon-chanpinzhizuo",
+  "url": "product.html",
+  "script": "js/pages/production.js",
+  "scripts": [
+    "js/pages/products/ProductCreator.js",
+    "js/pages/products/HighTempTask.js",
+    "js/pages/products/PJMonthTask.js",
+    "js/pages/products/QHJCTask.js"
+  ],
+  "styles": [
+    "css/production.css"
+  ]
+},
+{
+  "id": "bm_007",
+  "name": "质量检验",
+  "title": "质量检验",
+  "icon": "icon-zhiliangjianyan",
+  "url": "product.html",
+  "script": "js/pages/zhiliangjianyan.js"
+}]

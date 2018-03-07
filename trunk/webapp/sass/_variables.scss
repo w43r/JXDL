@@ -1,0 +1,109 @@
+/**
+ * 变量
+ * @author rexer
+ */
+
+
+/**
+ * 颜色
+ */
+
+//tab底色
+$color-tab:#1556a7;
+// tab前景色
+$color-tab-fn:#45abff;
+// 菜单底色
+$color-menu:#fff;
+// 菜单前景色
+$color-menu-fn:#ed3c63;
+// 按钮底色
+$color-btn:#a2d9ff;
+// 小尺寸按钮底色
+$color-btn-sm:#bbdff9;
+$color-btn-sm-fn:#7AC943;
+// 按钮前景色
+$color-btn-fn:#84cdff;
+// 单选点边框色
+$color-radio-border:#2f78d0;
+// 边框颜色
+$color-border:#e6e6e6;
+// Map边框
+$color-map-border:#3178ce;
+// panel边框
+$color-pane:#f2f2f2;
+//条件栏
+$color-condition:#79c9ff;
+// panel底色
+$color-bg:#fff;
+// 灰色
+$color-gray:#f1f1f1;
+//
+$color-text:#000;
+$color-text-fn:#fff;
+//主题色
+$color-theme:#2F78D0;
+// login
+$color-login:#8cbdeb;
+// 主题渐变色
+$gradientTheme: linear-gradient(to bottom, $color-theme, #5e9ade, $color-menu);
+$gradientBlue: linear-gradient(to right, $color-tab, lighten($color-tab,5%), lighten($color-tab,20%));
+$gradientBlueLite: linear-gradient(to right,$color-condition, lighten($color-condition,10%) 40%,lighten($color-condition,20%),lighten($color-condition,22%));
+
+/**
+ * 尺寸
+ */
+
+// 页面最小尺寸
+$min-height: 715px;
+// 主页面宽度
+$main-width:1360px;
+// 标题高度
+$banner-height:80px;
+// banner触发器大小
+$banner-trigger:4px;
+// 菜单宽度
+$menu-width:64px;
+// 菜单高度
+$menu-height:60px;
+// tab宽度
+$tab-width:100px;
+// tab高度
+$tab-height:48px;
+// 条件栏宽度
+$condition-width:342px;
+$condition-margin:10px;
+$condition-padding:5px;
+// 结果panel宽度
+$result-width:812px;
+// toolbar宽度
+$toolbar-width:122px;
+// panel下边距
+$pane-margin-bottom:7px;
+// panel边框
+$pane-border: 1px solid $color-border;
+// panel外边距大小
+$pane-margin:5px;
+$pane-padding:10px;
+// 工具栏
+$toolbar-margin:10px;
+$toolbar-padding:5px;
+// radio-size
+$radio-size:12px;
+$radio-border:1px solid $color-radio-border;
+
+/**
+ * 资源
+ */
+
+$img-banner:url('../imgs/banner.png');
+$img-toolbar-bg:url('../imgs/toolbar.png');
+
+/**
+ * 思源黑体
+ */
+
+// @font-face {
+//     font-family: 'Source Han Sans';
+//     src: url('../fonts/SourceHanSans.otf') format('opentype');
+//     font-style: normal;
+// }

@@ -1,0 +1,29 @@
+@charset "UTF-8";
+/**
+ * Material Design Icons
+ * https://design.google.com/icons/
+ */
+
+@font-face {
+	font-family: 'Material Icons';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Material Icons'), local('MaterialIcons-Regular'), url(../fonts/materialicons.woff2) format('woff2');
+}
+
+.material-icons {
+	font-family: 'Material Icons';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 24px;
+	line-height: 1;
+	letter-spacing: normal;
+	text-transform: none;
+	display: inline-block;
+	white-space: nowrap;
+	word-wrap: normal;
+	direction: ltr;
+	-webkit-font-feature-settings: 'liga';
+	-webkit-font-smoothing: antialiased;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm1hdGVyaWFsLWljb25zLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxpQkFBaUI7QUFDakI7OztHQUdHOztBQUVIO0NBQ0MsOEJBQThCO0NBQzlCLG1CQUFtQjtDQUNuQixpQkFBaUI7Q0FDakIsZ0hBQWdIO0NBQ2hIOztBQUVEO0NBQ0MsOEJBQThCO0NBQzlCLG9CQUFvQjtDQUNwQixtQkFBbUI7Q0FDbkIsZ0JBQWdCO0NBQ2hCLGVBQWU7Q0FDZix1QkFBdUI7Q0FDdkIscUJBQXFCO0NBQ3JCLHNCQUFzQjtDQUN0QixvQkFBb0I7Q0FDcEIsa0JBQWtCO0NBQ2xCLGVBQWU7Q0FDZixzQ0FBc0M7Q0FDdEMsb0NBQW9DO0NBQ3BDIiwiZmlsZSI6Im1hdGVyaWFsLWljb25zLmNzcyIsInNvdXJjZXNDb250ZW50IjpbIkBjaGFyc2V0IFwiVVRGLThcIjtcbi8qKlxuICogTWF0ZXJpYWwgRGVzaWduIEljb25zXG4gKiBodHRwczovL2Rlc2lnbi5nb29nbGUuY29tL2ljb25zL1xuICovXG5cbkBmb250LWZhY2Uge1xuXHRmb250LWZhbWlseTogJ01hdGVyaWFsIEljb25zJztcblx0Zm9udC1zdHlsZTogbm9ybWFsO1xuXHRmb250LXdlaWdodDogNDAwO1xuXHRzcmM6IGxvY2FsKCdNYXRlcmlhbCBJY29ucycpLCBsb2NhbCgnTWF0ZXJpYWxJY29ucy1SZWd1bGFyJyksIHVybCguLi9mb250cy9tYXRlcmlhbGljb25zLndvZmYyKSBmb3JtYXQoJ3dvZmYyJyk7XG59XG5cbi5tYXRlcmlhbC1pY29ucyB7XG5cdGZvbnQtZmFtaWx5OiAnTWF0ZXJpYWwgSWNvbnMnO1xuXHRmb250LXdlaWdodDogbm9ybWFsO1xuXHRmb250LXN0eWxlOiBub3JtYWw7XG5cdGZvbnQtc2l6ZTogMjRweDtcblx0bGluZS1oZWlnaHQ6IDE7XG5cdGxldHRlci1zcGFjaW5nOiBub3JtYWw7XG5cdHRleHQtdHJhbnNmb3JtOiBub25lO1xuXHRkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG5cdHdoaXRlLXNwYWNlOiBub3dyYXA7XG5cdHdvcmQtd3JhcDogbm9ybWFsO1xuXHRkaXJlY3Rpb246IGx0cjtcblx0LXdlYmtpdC1mb250LWZlYXR1cmUtc2V0dGluZ3M6ICdsaWdhJztcblx0LXdlYmtpdC1mb250LXNtb290aGluZzogYW50aWFsaWFzZWQ7XG59XG4iXX0= */

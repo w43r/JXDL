@@ -1,0 +1,89 @@
+/**
+ * custom-datepicker
+ * @author rexer
+ */
+
+input.custom-datepicker {
+    text-align: center;
+    vertical-align: middle;
+}
+
+input[type='text'].custom-datepicker {
+    font-size: 14px;
+    line-height: 30px;
+    height: 30px;
+    margin: 2px 5px;
+    padding: 6px 12px;
+    -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    color: #555;
+    border: solid 1px #9ac3f3;
+    border-radius: 4px;
+    background-color: #fff;
+    background-image: none;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+}
+
+input[type='number'].custom-datepicker {
+    width: 80px;
+    height: 26px;
+    margin-top: 5px;
+    vertical-align: middle;
+    border: solid 1px #9ac3f3;
+}
+
+input.custom-datepicker:focus {
+    border-color: #9ac3f3;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+}
+
+select.custom-datepicker {
+    height: 26px;
+    margin-top: 5px;
+    border: solid 1px #9ac3f3;
+}
+
+span.custom-datepicker {
+    display: inline-flex;
+}
+
+label.custom-datepicker {
+    display: block;
+}
+
+span.custom-datepicker,
+label.custom-datepicker {
+    line-height: 34px;
+    padding: 0;
+    vertical-align: middle;
+}
+
+.custom-datepicker-ctrl {
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin-top: 5px;
+    flex-flow: wrap;
+    justify-content: center;
+}
+
+.custom-datepicker.ctrl {
+    float: none;
+    margin-top: 5px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 5px;
+}
+
+.custom-datepicker.ext {
+    float: none;
+    margin-top: 5px;
+    margin-right: 2px;
+    margin-left: 2px;
+}
+
+
+/*custom-datepicker End*/

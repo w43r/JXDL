@@ -1,0 +1,477 @@
+<!-- 页面布局 -->
+<script type="text/html" class="tpl_html" id="tpl_product">
+    <div class="body full">
+        <div id="menu" class="banner c"></div>
+        <div id="mainContent" class="content c full clearfix"></div>
+    </div>
+</script>
+<!-- 产品页面 -->
+<script type="text/html" class="tpl_html" id="tpl_page">
+    <div id="conditionContent" class="conditionContent">
+        <div id="condition-title" class="nonselect">
+            <i class="icon fa fa-search" aria-hidden="true"></i>
+            <span>条件栏</span>
+        </div>
+        <div id="condition" class="tpl-condition"></div>
+        <button id="statistics" class="tpl-btn btn-default active" style="display: none; margin: 10px auto; width: 100%; max-width: 300px; height: 30px;">计算</button>
+    </div>
+    <div id="resultContent" class="resultContent tpl-content" allowFullScreen="true">
+        <div class="resultPanel"></div>
+    </div>
+    <div id="toolbarContent" class="tpl-toolbar">
+        <div class="toolbar-title nonselect">
+            <i class="icon fa fa-wrench" aria-hidden="true"></i>
+            <span>工具栏</span>
+        </div>
+        <div class="toolbar"></div>
+    </div>
+</script>
+<!-- 用户页面 -->
+<script type="text/html" class="tpl_html" id="tpl_user_manage">
+    <div id="user-panel" class="user-admin-pane panel panel-default">
+        <div class="panel-heading">
+            <div id="user-toolbar">
+                <div class="user-toolbar btn-group">
+                    <button type="button" data-ctrl="insert" class="operator ctrl btn btn-primary">添加用户</button>
+                    <button type="button" data-ctrl="delete" class="operator ctrl btn btn-danger">删除用户</button>
+                    <button type="button" data-ctrl="update" class="operator ctrl btn btn-info">修改资料</button>
+                </div>
+                <div class="user-toolbar btn-group">
+                    <button type="button" data-ctrl="authority" class="operator ctrl btn btn-warning">权限管理</button>
+                    <button type="button" data-ctrl="pwd" class="operator ctrl btn btn-warning">密码管理</button>
+                </div>
+                <div class="user-toolbar btn-group">
+                    <button type="button" data-ctrl="confirm" class="operator sync btn btn-success" disabled>提交更改</button>
+                    <button type="button" data-ctrl="cancel" class="operator sync btn btn-info">取消</button>
+                </div>
+                <div class="user-toolbar">
+                    <button type="button" data-ctrl="refresh" class="operator btn btn-info">刷新</button>
+                </div>
+                <div class="tip user-ctrl-tip"><i>支持快捷键</i></div>
+            </div>
+        </div>
+        <div id="user-table" class="panel-body p0 w"></div>
+    </div>
+</script>
+<script type="text/html" class="tpl_html" id="tpl_user_auth">
+    <div class="full">
+        <div class="auth-content">
+            <br>
+            <div class="auth-row">
+                <a class="switch-btn-label btn">浏览权限</a>
+                <input class="switch-btn" name="BROWSEALL" type="checkbox" data-on-text="全市" data-off-text="本地">
+            </div>
+            <br>
+            <div class="auth-row">
+                <a class="switch-btn-label btn">下载权限</a>
+                <input class="switch-btn" name="DOWNLOADALL" type="checkbox" data-on-text="全市" data-off-text="本地">
+            </div>
+            <br>
+            <div class="auth-row">
+                <a class="switch-btn-label btn">产品审核</a>
+                <input class="switch-btn" name="AUDIT" type="checkbox" data-on-text="&nbsp;是&nbsp;&nbsp;" data-off-text="&nbsp;否&nbsp;&nbsp;">
+            </div>
+            <br>
+            <div class="auth-row">
+                <a class="switch-btn-label btn">产品制作</a>
+                <input class="switch-btn" name="CREATEPRODUCT" type="checkbox" data-on-text="&nbsp;是&nbsp;&nbsp;" data-off-text="&nbsp;否&nbsp;&nbsp;">
+            </div>
+        </div>
+    </div>
+</script>
+<script type="text/html" class="tpl_html" id="tpl_user_profile">
+    <div class="user-profile-pane">
+        <form id="profile" class="ch" role="form">
+            <div class="input-group">
+                <span class="input-group-addon mw100">用户名</span>
+                <input name="UserName" type="text" class="profile form-control" readonly>
+            </div>
+            <br>
+            <div class="input-group">
+                <span class="input-group-addon mw100">地区</span>
+                <input name="Country" type="text" class="profile form-control" readonly>
+            </div>
+            <br>
+            <div class="input-group">
+                <span class="input-group-addon mw100">区域代码</span>
+                <input name="AreaCode" type="text" class="profile form-control" readonly>
+            </div>
+            <br>
+            <div class="input-group">
+                <span class="input-group-addon mw100">电话</span>
+                <input name="Tel" type="tel" class="profile writable form-control" readonly>
+            </div>
+            <br>
+            <div class="input-group">
+                <span class="input-group-addon mw100">E-Mail</span>
+                <input name="EMail" type="email" class="profile writable form-control" readonly>
+            </div>
+            <br>
+            <div class="input-group">
+                <span class="input-group-addon mw100">浏览权限</span>
+                <input name="B" type="text" class="authority form-control" readonly>
+            </div>
+            <br>
+            <div class="input-group">
+                <span class="input-group-addon mw100">下载权限</span>
+                <input name="D" type="text" class="authority form-control" readonly>
+            </div>
+            <br>
+            <div class="ch w">
+                <div class="btn-group user-toolbar">
+                    <button type="button" class="modify btn btn-info">修改资料</button>
+                    <button type="button" class="change btn btn-warning">修改密码</button>
+                </div>
+                <div class="btn-group user-toolbar r">
+                    <button type="button" class="confirm btn btn-danger" disabled>提交</button>
+                    <button type="button" class="cancel btn btn-info" disabled>取消</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</script>
+<script type="text/html" class="tpl_html" id="tpl_user_changepwd">
+    <div class="input-group change-password pwd_old">
+        <span name="pwd_old" class="input-group-addon mw100">原密码</span>
+        <input name="pwd_old" type="password" class="form-control">
+    </div>
+    <br class="pwd_old">
+    <div class="input-group change-password password">
+        <span name="password" class="input-group-addon mw100">设置密码</span>
+        <input name="password" type="password" class="form-control">
+    </div>
+    <br class="password">
+    <div class="input-group change-password pwd_confirm">
+        <span name="pwd_confirm" class="input-group-addon mw100">密码确认</span>
+        <input name="pwd_confirm" type="password" class="form-control">
+    </div>
+</script>
+<!-- 条件项 -->
+<script type="text/html" class="tpl_html" id="tpl_condition">
+    <div class="condition">
+        <i class="condition-title colon"></i>
+        <div class="condition-content"></div>
+    </div>
+</script>
+<!-- datepicker -->
+<script type="text/html" class="tpl_html" id="tpl_condition_datepicker">
+    <div class="condition">
+        <i class="condition-title colon">时段</i>
+        <div class="condition-content">
+            <div class="query-time">
+                <span class="custom-datepicker">开始<input type="text" class="start custom-datepicker"></span>
+                <span class="custom-datepicker">结束<input type="text" class="end custom-datepicker"></span>
+                <div class="custom-datepicker-ctrl"></div>
+            </div>
+        </div>
+    </div>
+</script>
+<script type="text/html" class="tpl_html" id="tpl_condition_datepicker_single">
+    <div class="condition">
+        <i class="condition-title colon">日期</i>
+        <div class="condition-content">
+            <div class="query-time">
+                <input type="text" class="start custom-datepicker">
+                <div class="custom-datepicker-ctrl"></div>
+            </div>
+        </div>
+    </div>
+</script>
+<script type="text/html" class="tpl_html" id="tpl_condition_datepicker_time">
+    <button data="subtract,h,1" class="custom-datepicker ctrl normalBtn">前小时</button>
+    <button data="add,h,1" class="custom-datepicker ctrl normalBtn">后小时</button>
+    <button data="all,day" class="custom-datepicker ctrl normalBtn">当天</button>
+    <button data="subtract,d,1" class="custom-datepicker ctrl normalBtn">前一天</button>
+    <button data="add,d,1" class="custom-datepicker ctrl normalBtn">后一天</button>
+</script>
+<script type="text/html" class="tpl_html" id="tpl_condition_datepicker_time_single">
+    <button data="subtract,h,1" class="custom-datepicker ctrl normalBtn">前小时</button>
+    <button data="add,h,1" class="custom-datepicker ctrl normalBtn">后小时</button>
+    <button data="subtract,d,1" class="custom-datepicker ctrl normalBtn">前一天</button>
+    <button data="add,d,1" class="custom-datepicker ctrl normalBtn">后一天</button>
+</script>
+<script type="text/html" class="tpl_html" id="tpl_condition_datepicker_date">
+    <button data="add,y,1" class="custom-datepicker ctrl normalBtn">+&nbsp;年</button>
+    <button data="subtract,y,1" class="custom-datepicker ctrl normalBtn">-&nbsp;年</button>
+    <button data="add,M,1" class="custom-datepicker ctrl normalBtn">+&nbsp;月</button>
+    <button data="subtract,M,1" class="custom-datepicker ctrl normalBtn">-&nbsp;月</button>
+    <button data="add,d,1" class="custom-datepicker ctrl normalBtn">+&nbsp;日</button>
+    <button data="subtract,d,1" class="custom-datepicker ctrl normalBtn">-&nbsp;日</button>
+    <button data="season,spring" class="custom-datepicker ctrl normalBtn">春</button>
+    <button data="season,summer" class="custom-datepicker ctrl normalBtn">夏</button>
+    <button data="season,autumn" class="custom-datepicker ctrl normalBtn">秋</button>
+    <button data="season,winter" class="custom-datepicker ctrl normalBtn">冬</button>
+    <button data="all,M" class="custom-datepicker ctrl normalBtn">当月</button>
+    <button data="all,y" class="custom-datepicker ctrl normalBtn">全年</button>
+</script>
+<script type="text/html" class="tpl_html" id="tpl_condition_datepicker_date_single">
+    <button data="add,y,1" class="custom-datepicker ctrl normalBtn">+&nbsp;年</button>
+    <button data="subtract,y,1" class="custom-datepicker ctrl normalBtn">-&nbsp;年</button>
+    <button data="add,M,1" class="custom-datepicker ctrl normalBtn">+&nbsp;月</button>
+    <button data="subtract,M,1" class="custom-datepicker ctrl normalBtn">-&nbsp;月</button>
+    <button data="add,d,1" class="custom-datepicker ctrl normalBtn">+&nbsp;日</button>
+    <button data="subtract,d,1" class="custom-datepicker ctrl normalBtn">-&nbsp;日</button>
+</script>
+<!-- hou -->
+<script type="text/html" class="tpl_html" id="tpl_condition_hou_single">
+    <div class="condition">
+        <i class="condition-title colon">时间</i>
+    </div>
+    <div class="condition-content">
+        <div class="query-time">
+            <input type="text" class="start custom-datepicker hidden">
+            <input type="text" class="end custom-datepicker hidden">
+            <span class="custom-datepicker">
+                <input type="number" class="custom-datepicker ext year">
+                <select class="custom-datepicker ext month"></select>
+                <select class="custom-datepicker ext hou"></select>
+            </span>
+        </div>
+    </div>
+</script>
+<script type="text/html" class="tpl_html" id="tpl_condition_hou">
+    <div class="condition">
+        <i class="condition-title colon">时段</i>
+    </div>
+    <div class="condition-content">
+        <div class="query-time start">
+            <input type="text" class="start custom-datepicker hidden">
+            <input type="text" class="end custom-datepicker hidden">
+            <span class="custom-datepicker">开始
+                <input type="number" class="custom-datepicker ext year">
+                <select class="custom-datepicker ext month"></select>
+                <select class="custom-datepicker ext hou"></select>
+            </span>
+        </div>
+        <div class="query-time end">
+            <input type="text" class="start custom-datepicker hidden">
+            <input type="text" class="end custom-datepicker hidden">
+            <span class="custom-datepicker">结束
+                <input type="number" class="custom-datepicker ext year">
+                <select class="custom-datepicker ext month"></select>
+                <select class="custom-datepicker ext hou"></select>
+            </span>
+        </div>
+    </div>
+</script>
+<!-- 历年 -->
+<script type="text/html" class="tpl_html" id="tpl_condition_year">
+    <div class="condition">
+        <i class="condition-title colon"></i>
+        <div class="condition-content">
+            <input class="year start singleTime compareTime" type="number">至
+            <input class="year end singleTime compareTime" type="number">
+        </div>
+    </div>
+</script>
+<!-- 指标头 -->
+<script type="text/html" class="tpl_html" id="tpl_condition_index">
+    <div class="condition">
+        <i class="condition-title">
+            <i class="i tpl-index-title"></i><a class="btn btn-xs"><i class="tpl-index-btn ctrl fa fa-minus-circle" title="指标" data-placement="right"></i></a>
+        </i>
+        <div class="condition-content"></div>
+    </div>
+</script>
+<!-- 站点选择 -->
+<script type="text/html" class="tpl_html" id="tpl_condition_station">
+    <div class="condition">
+        <i class="condition-title colon">站点</i>
+        <div class="condition-content">
+            <div class="tpl-station">
+                <p class="stationpanel-text"></p>
+                <div style="margin-top: 2px;padding: 0;width:100%; text-align: center;">
+                    <button class="normalBtn stationpanel-btn">选择</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+<script type="text/html" class="tpl_html" id="tpl_map_style_editor">
+    <div id="style-editor-container" class="container w h">
+        <div id="style-editor-head" class="row clearfix ch">
+            <div class="input-group ch" style="width: 400px;margin-bottom: 10px;">
+                <span class="input-group-addon">配色方案</span>
+                <select class="style-editor select form-control" title="下拉选择配色方案"></select>
+            </div>
+        </div>
+        <div id="style-editor-body" class="row clearfix ch" style="display: flex;flex-flow: row wrap;justify-content: flex-start;">
+        </div>
+    </div>
+</script>
+<!-- 产品制作页面 -->
+<script type="text/html" class="tpl_html" id="tpl_production">
+    <div id="product-list" class="h p0">
+        <div id="product-table" class="w">
+        </div>
+        <div id="product-condtion" class="w" style="overflow: hidden;">
+            <div class="panel panel-default h m0" style="border: none;">
+                <div class="panel-heading" style="display: flex;justify-content: space-between;align-items: center;">
+                    <span class="panel-title" style="margin-right: 10px;overflow: hidden;">产品检索</span>
+                    <div class="btn-group">
+                        <button type="button" id="product-query-10" class="btn btn-info">最近10条</button>
+                        <button type="button" id="product-query-100" class="btn btn-primary">最近100条</button>
+                    </div>
+                    <div id="product-pager" style="height: 34px;width: 222px;"></div>
+                </div>
+                <div class="panel-body">
+                    <div class="row clearfix mb15">
+                        <div class="col-md-4 column">
+                            <label for="product-time" class="font-inherit">创建时间</label>
+                            <div name="product-time" class="query-time ch w">
+                                <span class="custom-datepicker w">开始<input type="text" class="start custom-datepicker" style="width: calc(100% - 38px);"></span>
+                                <span class="custom-datepicker w">结束<input type="text" class="end custom-datepicker" style="width: calc(100% - 38px);"></span>
+                                <div class="custom-datepicker-ctrl">
+                                    <button data="add,y,1" class="custom-datepicker ctrl normalBtn">+&nbsp;年</button>
+                                    <button data="subtract,y,1" class="custom-datepicker ctrl normalBtn">-&nbsp;年</button>
+                                    <button data="add,M,1" class="custom-datepicker ctrl normalBtn">+&nbsp;月</button>
+                                    <button data="subtract,M,1" class="custom-datepicker ctrl normalBtn">-&nbsp;月</button>
+                                    <button data="add,d,1" class="custom-datepicker ctrl normalBtn">+&nbsp;日</button>
+                                    <button data="subtract,d,1" class="custom-datepicker ctrl normalBtn">-&nbsp;日</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 column">
+                            <label for="product-type" class="font-inherit">产品类别</label>
+                            <select id="productType" name="product-type" class="R-mutiselect form-control" style="min-height: 108px;" multiple>
+                            </select>
+                        </div>
+                        <div class="col-md-4 column">
+                            <label for="product-status" class="font-inherit">产品状态</label>
+                            <select id="productState" name="product-status" class="R-mutiselect form-control" style="min-height: 108px;" multiple>
+                                <option value="1" selected>未提交</option>
+                                <option value="2" selected>待审核</option>
+                                <option value="3" selected>待发布</option>
+                                <option value="4" selected>未通过</option>
+                                <option value="5" selected>已发布</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row clearfix mb15">
+                        <div class="col-md-4 column"></div>
+                        <div class="col-md-4 column">
+                            <button id="product-btn-query" type="button" class="btn btn-info w">查询</button>
+                        </div>
+                        <div class="col-md-4 column"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="product-display" class="h p0" style="overflow: hidden;">
+    </div>
+    <div class="fixed-action-fab">
+        <a class="fab-btn fab-floating fab-large red">
+            <i class="large material-icons rotateScale">add</i>
+        </a>
+        <ul></ul>
+    </div>
+</script>
+<!-- 创建产品 -->
+<script type="text/html" class="tpl_html" id="tpl_production_create">
+    <div class="container w h product-container">
+        <div class="row clearfix ch" style="margin: 20px auto;">
+            <div class="input-group ch" style="width: 400px;">
+                <span class="input-group-addon">产品类型</span>
+                <select name="product-type" class="form-control">
+                </select>
+            </div>
+        </div>
+        <div class="toolbar row clearfix ch" style="margin: auto;"></div>
+        <div id="product-create-content" class="row clearfix ch">
+        </div>
+        <div class="row clearfix ch" style="text-align: center;">
+            <button id="product-create-submit" type="button" class="btn btn-info">生成</button>
+            <button id="product-create-cancel" type="button" class="btn btn-warning">放弃</button>
+        </div>
+    </div>
+</script>
+<!-- 创建产品表单 -->
+<script type="text/html" class="tpl_html" id="tpl_production_create_form">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <form id="product-create-form" class="form-horizontal" role="form">
+                <div class="form-group">
+                    <label for="productTitle" class="col-sm-2 control-label font-inherit">产品标题</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="productTitle" placeholder="标题">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="productSummary" class="col-sm-2 control-label font-inherit">产品简介</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="productSummary" placeholder="摘要">
+                    </div>
+                </div>
+                <div id="product-create-form-content" class="form-group">
+                    <label for="productContent" class="col-sm-2 control-label font-inherit">产品内容</label>
+                    <div class="col-sm-10">
+                        <textarea name="productContent" class="form-control product-create-form" style="resize: vertical;min-height: 200px;"></textarea>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</script>
+<!-- 产品审核 -->
+<script type="text/html" class="tpl_html" id="tpl_production_review">
+    <div class="container w h product-container">
+        <div class="row clearfix ch">
+            <div class="panel panel-default" style="margin: 10px auto;">
+                <div class="panel-body">
+                    <div class="page-header clearfix" style="margin-top: 0;">
+                        <h3></h3>
+                        <p style="float: right;color: #777;"></p>
+                    </div>
+                    <div class="form-group clearfix">
+                        <label for="productComment" class="font-inherit">批注（可选）</label>
+                        <textarea name="productComment" class="form-control" style="resize: vertical;min-height: 200px;"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row clearfix ch" style="text-align: center;">
+            <button id="product-review-yes" type="button" class="btn btn-success">通过</button>
+            <button id="product-review-no" type="button" class="btn btn-danger">驳回</button>
+            <button id="product-review-cancel" type="button" class="btn btn-info">放弃</button>
+        </div>
+    </div>
+</script>
+<!-- 产品上传 -->
+<script type="text/html" class="tpl_html" id="tpl_production_upload">
+    <div class="container w">
+        <div class="panel panel-default" style="margin: 10px auto;padding: 10px 0;">
+            <div class="panel-body">
+                <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label for="productTitle" class="col-sm-2 control-label font-inherit">产品标题</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="productTitle" placeholder="标题">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="productSummary" class="col-sm-2 control-label font-inherit">产品简介</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="productSummary" placeholder="摘要">
+                        </div>
+                    </div>
+                    <div class="row clearfix" style="margin: 30px auto 0;">
+                        <span class="btn btn-success fileinput-button">
+		        			<i class="glyphicon glyphicon-plus"></i>
+		        			<span>选择word文件</span>
+                        <input id="fileupload" type="file" name="file" accept="application/msword">
+                        </span>
+                        <span class="filename"></span>
+                        <div id="progress" class="progress" style="margin-top: 10px;">
+                            <div class="progress-bar progress-bar-success"></div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="row clearfix ch product-container" style="text-align: center;">
+        <button id="product-upload-yes" type="button" class="btn btn-success">上传</button>
+        <button id="product-upload-cancel" type="button" class="btn btn-warning">放弃</button>
+    </div>
+</script>

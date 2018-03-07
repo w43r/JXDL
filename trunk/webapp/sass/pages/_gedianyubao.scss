@@ -1,0 +1,121 @@
+$color-blue-lite: #84cdff;
+$color-orange-lite: #f7ac3b;
+$color-green-lite: #71cc7a;
+
+// 定义border
+@mixin borderBox {
+  border: 1px solid $color-blue-lite;
+  border-radius: 4px;
+}
+
+// 指示主题颜色
+@mixin indicatorThemeColor($marker:"") {
+  &.modified#{$marker} {
+    background-color: $color-blue-lite;
+  }
+  &.opened#{$marker} {
+    background-color: $color-orange-lite;
+  }
+  &.submitted#{$marker} {
+    background-color: $color-green-lite;
+  }
+  &.none#{$marker} {
+    background-color: #fff;
+  }
+}
+
+// 格点预报
+.gedianyubao {
+
+  // 条件项： 制作时间
+  .makeTime__condition {
+    select, input {
+      @include borderBox;
+      padding: 3px 6px;
+      text-align: center;
+    }
+  }
+
+  // 公用样式
+  @at-root .hourSpan-group {
+    /* 格点预报制作时间按钮组 */
+    // 定义网格|大小|间距
+    $col: 8;
+    $row: 6;
+    $gap: 6px;
+    $cell-size: 30px;
+    // 定义指示器大小
+    $indicator-size: 16px;
+
+    // grid布局 8x6
+    display: grid;
+    grid-template-columns: repeat($col, $cell-size); // auto
+    grid-template-rows: repeat($row, $cell-size);
+    grid-gap: $gap;
+
+    // 无指示器
+    &.no-indicator {
+      grid-template-rows: repeat(#{$row - 1}, $cell-size);
+    }
+
+    .hourSpan {
+      justify-self: center; // 水平居中
+      width: 100%;
+      height: 100%;
+      @include borderBox;
+      padding: 0;
+
+      // prevent outline on focus
+      &:focus {
+        outline: 0;
+      }
+
+      &.none {
+        color: gray;
+      }
+
+      &:not(.none) {
+        color: #fff;
+        border-color: transparent;
+      }
+
+      @include indicatorThemeColor();
+    }
+
+    .indicator {
+      // 合并单元格
+      grid-column: 1 / span $col;
+      align-content: center; // 垂直居中
+
+      // grid布局 4x1
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+
+      i {
+        justify-self: center;
+        display: inline-block;
+        font-size: 13px;
+        font-style: normal;
+        color: #000;
+        text-align: left;
+
+        &:before {
+          content: "";
+          display: block;
+          float: left;
+          width: $indicator-size;
+          height: $indicator-size;
+          border-radius: $indicator-size;
+          margin-right: 2px;
+        }
+        &.none:before {
+          border: 1px solid $color-blue-lite;
+        }
+
+        @include indicatorThemeColor(":before");
+      }
+    }
+
+  }
+
+}

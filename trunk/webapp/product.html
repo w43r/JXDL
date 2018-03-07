@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_537102_f5ihqzcn5giafw29.css">
+  <!-- animate.css from CDN -->
+  <link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/animate.css/3.5.2/animate.css">
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+  <link rel="stylesheet" type="text/css" href="css/material-icons.css"/>
+  <link rel="stylesheet" type="text/css" href="modules/bootstrap/bootstrap.min.css"/>
+  <link rel="stylesheet" type="text/css" href="modules/daterangepicker/daterangepicker.css"/>
+  <link rel="stylesheet" type="text/css" href="modules/handsontable/handsontable.full.min.css"/>
+  <link rel="stylesheet" type="text/css" href="modules/bs-switch/bootstrap-switch.min.css"/>
+  <link rel="stylesheet" type="text/css" href="modules/bs-select/css/bootstrap-select.min.css"/>
+  <link rel="stylesheet" type="text/css" href="modules/jquery.minicolors/jquery.minicolors.css"/>
+  <link rel="stylesheet" type="text/css" href="modules/r-pagination/pagination.r.css"/>
+  <link rel="stylesheet" type="text/css" href="modules/r-datepicker/datepicker.r.css"/>
+  <link rel="stylesheet" type="text/css" href="modules/r-stationpicker/stationpicker.r.css"/>
+  <link rel="stylesheet" type="text/css" href="modules/perfect-scrollbar/css/perfect-scrollbar.min.css"/>
+  <link rel="stylesheet" type="text/css" href="modules/fab/fab.css"/>
+  <link rel="stylesheet" type="text/css" href="modules/split/split.css"/>
+  <link rel="stylesheet" type="text/css" href="modules/fileupload/jquery.fileupload.css"/>
+  <link rel="stylesheet" type="text/css" href="css/main.css"/>
+  <!-- util -->
+  <script type="text/javascript" src="modules/jquery.min.js"></script>
+  <script type="text/javascript" src="js/common/jquery.ajax.setup.js"></script>
+  <script type="text/javascript" src="js/common/deferredquery.js"></script>
+  <script type="text/javascript" src="js/common/clazz.js"></script>
+  <script type="text/javascript" src="js/common/request.js"></script>
+  <script type="text/javascript" src="modules/html2canvas.js"></script>
+  <script type="text/javascript" src="modules/moment.js"></script>
+  <script type="text/javascript" src="modules/pdfobject.js"></script>
+  <!-- util End -->
+  <script type="text/javascript" src="modules/layer/layer.js"></script>
+  <script type="text/javascript" src="modules/bootstrap/bootstrap.min.js"></script>
+  <script type="text/javascript" src="modules/daterangepicker/daterangepicker.js"></script>
+  <script type="text/javascript" src="modules/bs-switch/bootstrap-switch.min.js"></script>
+  <script type="text/javascript" src="modules/bs-select/js/bootstrap-select.min.js"></script>
+  <script type="text/javascript" src="modules/fab/fab.js"></script>
+  <script type="text/javascript" src="modules/fileupload/vendor/jquery.ui.widget.js"></script>
+  <script type="text/javascript" src="modules/fileupload/jquery.fileupload.js"></script>
+  <script type="text/javascript" src="modules/jquery.minicolors/jquery.minicolors.min.js"></script>
+  <script type="text/javascript" src="modules/split/split.js"></script>
+  <script type="text/javascript" src="modules/circle-loader/circles.min.js"></script>
+  <!-- Handsontable -->
+  <script type="text/javascript" src="modules/handsontable/handsontable.full.js"></script>
+  <script type="text/javascript" src="modules/handsontable/gridHelper.min.js"></script>
+  <script type="text/javascript" src="modules/handsontable/handsontable.addon.js"></script>
+  <!-- HighCharts -->
+  <!-- <script type="text/javascript" src="modules/highcharts/highcharts.js"></script> -->
+  <script type="text/javascript" src="modules/highcharts/highstock.js"></script>
+  <!-- <script type="text/javascript" src="modules/highcharts/highcharts-3d.js"></script> -->
+  <script type="text/javascript" src="modules/highcharts/modules/exporting.js"></script>
+  <script type="text/javascript" src="modules/highcharts/modules/offline-exporting.js"></script>
+  <script type="text/javascript" src="modules/highcharts/modules/canvas-tools.js"></script>
+  <script type="text/javascript" src="modules/highcharts/modules/export-csv.js"></script>
+  <script type="text/javascript" src="modules/highcharts/modules/highcharts-export-clientside.js"></script>
+  <script type="text/javascript" src="modules/highcharts/themes/grid-light.js"></script>
+  <script type="text/javascript" src="modules/highcharts/lang/zh-cn.js"></script>
+  <!-- WeatherMap -->
+  <script type="text/javascript" src='weathermap/WeatherMap.Include.js'></script>
+  <!-- init G from parent window-->
+  <script type="text/javascript">
+    var G = window.parent.G;
+  </script>
+  <!-- plugins -->
+  <script type="text/javascript" src="modules/r-datepicker/datepicker.r.js"></script>
+  <script type="text/javascript" src="modules/r-stationpicker/stationpicker.r.js"></script>
+  <script type="text/javascript" src="modules/r-stationpicker/stationpanel.defaults.js"></script>
+  <script type="text/javascript" src="modules/r-pagination/pagination.r.js"></script>
+  <!-- <script type="text/javascript" src="modules/r-menu/menu.r.js"></script> -->
+  <script type="text/javascript" src="modules/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js"></script>
+  <!-- ChartUtil -->
+  <script type="text/javascript" src="js/ChartControl.js"></script>
+  <!-- SurferUtil -->
+  <script type="text/javascript" src="js/SurferControl.js"></script>
+  <!-- MapUtil -->
+  <script type="text/javascript" src="js/map/style/StyleManager.js"></script>
+  <script type="text/javascript" src="js/map/style/StyleEditor.js"></script>
+  <script type="text/javascript" src="js/map/style/LegendManager.js"></script>
+  <script type="text/javascript" src="js/map/styles/commonStyles.js"></script>
+  <script type="text/javascript" src="js/map/styles/heatMap_Rain24Styles.js"></script>
+  <script type="text/javascript" src="js/map/styles/heatMap_mciStyles.js"></script>
+  <script type="text/javascript" src="js/map/styles/mciStyles.js"></script>
+  <script type="text/javascript" src="js/map/FeatureUtilityClass.js"></script>
+  <script type="text/javascript" src="js/map/Renderer/Plot.js"></script>
+  <script type="text/javascript" src="js/map/Renderer/Contour.js"></script>
+  <script type="text/javascript" src="js/map/Layers/LocalTiledCacheLayer.js"></script>
+  <script type="text/javascript" src="js/MapControl.js"></script>
+  <!-- tpl -->
+  <script type="text/javascript" src="tpl/tpl.js"></script>
+  <script type="text/javascript" src="tpl/tpl.const.js"></script>
+  <!-- modules -->
+  <script type="text/javascript" src="js/common/gms.js"></script>
+  <!--http://weatherone.com.cn:3321/v2/polyfill.js -->
+  <script type="text/javascript" src="http://weatherone.com.cn:3321/v2/polyfill.js "></script>
+</head>
+
+<body></body>
+<!-- init product page -->
+<script type="text/javascript">
+  // 动态加载脚本 & 样式表
+  ~function (extScripts, extStyles) {
+    var head = window.document.querySelector('head');
+    if (isPretty(extStyles)) { // 加载CSS
+      extStyles.forEach(function (style) {
+        var node = document.createElement('link');
+        node.rel = 'stylesheet';
+        node.type = 'text/css';
+        node.href = style;
+        head.appendChild(node);
+      });
+    }
+    if (isPretty(extScripts)) { // 加载JS
+      loadJS(extScripts[0], function () {
+        extScripts.slice(1).forEach(function (script) {
+          loadJS(script);
+        });
+      });
+    }
+
+    function isPretty(array) {
+      return $.isArray(array) && array.length > 0;
+    }
+
+    // JS阻塞加载
+    function loadJS(src, received) {
+      var node = document.createElement('script');
+      node.type = 'text/javascript';
+      node.src = src;
+      if (received) {
+        node.onload = node.onreadystatechange = function () {
+          if (!this.readyState || 'loaded' === this.readyState || 'complete' === this.readyState) {
+            this.onload = this.onreadystatechange = null;
+            received();
+          }
+        }
+      }
+      head.appendChild(node);
+    }
+  }(G.BModule.data().scripts, G.BModule.data().styles);
+  // 执行模版脚本
+  $.getScript(G.BModule.data().script, function () {
+    window.run();
+  });
+</script>
+
+</html>

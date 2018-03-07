@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE mapper 
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="com.spd.mapper.UserMapper"> 
+    <!-- 这里的id必须和UserMapper接口中的接口方法名相同，不然运行的时候也要报错 --> 
+    <select id="isUserExisted" resultType="java.util.HashMap"  parameterType="map"> 
+    <![CDATA[
+    	select userName from t_user where userName = #{userName}
+		]]>
+    </select>
+    
+    <select id="login" resultType="java.util.HashMap"  parameterType="map"> 
+    <![CDATA[
+    	select id, userName, showName from t_user where userName = #{userName} and password = #{password}
+		]]>
+    </select>
+     <insert id="register" parameterType="com.spd.pojo.TUser"> 
+     	<selectKey resultType="java.lang.Short" order="AFTER" keyProperty="id">
+			SELECT LAST_INSERT_ID() AS id
+		</selectKey>
+
+     	insert into t_user(userName, showName, password) values (#{userName}, #{showName}, #{password})
+     </insert>
+     
+     <insert id="addUserRole" parameterType="com.spd.pojo.TUser"> 
+     	insert into t_user_role(userId, roleId) values (#{userId}, #{roleId})
+     </insert>
+     
+     <select id="queryAccessURLs" resultType="java.util.HashMap"  parameterType="map"> 
+	    <![CDATA[
+	    	select a.unaccessurl as unaccessurl, a.unaccessmethod as unaccessmethod from t_authority a 
+			left join t_role_authority b on a.id = b.authorityId
+			left join t_role c on b.roleId = c.id 
+			left join t_user_role d on c.id = d.roleId
+			left join t_user e on e.id = d.userId
+			where userid = #{id}
+		]]>
+    </select>
+    
+    <select id="queryUnLoginUnAccessURLs" resultType="java.util.HashMap"  parameterType="map"> 
+	    <![CDATA[
+	    	select a.unaccessurl as unaccessurl, a.unaccessmethod as unaccessmethod from t_authority a 
+			left join t_role_authority b on a.id = b.authorityId
+			left join t_role c on b.roleId = c.id 
+			where c.id = 3
+		]]>
+    </select>
+    
+    <select id="getAllUser" resultType="java.util.HashMap"  parameterType="map"> 
+    <![CDATA[
+    	select id, userName, showName from t_user
+		]]>
+    </select>
+    
+    <select id="getForecastor" resultType="java.util.HashMap"  parameterType="map"> 
+    <![CDATA[
+    	select name, departCode, departName from t_forecastor where departCode = (select departCode from t_user_depart where userName = #{userName})
+		]]>
+    </select>
+    
+    <select id="getIssuer" resultType="java.util.HashMap"  parameterType="map"> 
+    <![CDATA[
+    	select name, departCode, departName, type from t_issuer where departCode = (select departCode from t_user_depart where userName = #{userName})
+		]]>
+    </select>
+    
+</mapper> 

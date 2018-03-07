@@ -1,0 +1,54 @@
+
+.guochengyubao {
+  .calculator {
+    background: orange;
+    color: white;
+    border-radius: 4px;
+    padding: 3px 84px;
+    border: 1px solid orange;
+  }
+  .conditionContent {
+    .condition-process,.condition-coldAir {
+      select {
+        border: 1px solid #84cdff;
+        border-radius: 4px;
+        padding: 3px 6px;
+        text-align: center;
+        width: 166px;
+      }
+    }
+  }
+  // 错行样式
+  .cross-line__condition {
+
+    .cross-line {
+      // 定义变量
+      $height: 58px;
+      $title-width: 85px;
+      $line-height: 30px;
+
+      display: block;
+      position: relative;
+      width: 100%;
+      height: $title-width;
+
+      .title {
+        float: left;
+        display: block;
+        padding: 2px;
+        width: $title-width;
+        height: $line-height;
+        background-image: $gradientBlueLite;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content {
+        float: right;
+        height: $height;
+        padding-top: 10px;
+        width: 95%;
+      }
+    }
+  }
+}
+

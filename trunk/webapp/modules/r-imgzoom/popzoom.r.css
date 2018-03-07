@@ -1,0 +1,26 @@
+/**
+ * [description]
+ * @author  rexer rexercn@gmail.com
+ * @version 0.0.1
+ */
+
+.R.popzoom-cover {
+    position: absolute;
+    z-index: 800;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.R.popzoom-inner {
+    position: absolute;
+    display: block;
+    border: none;
+    margin: auto;
+    background: transparent;
+    background-image: none;
+}
+
+.R.popzoom-inner img {}

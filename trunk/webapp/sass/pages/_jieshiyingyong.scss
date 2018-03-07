@@ -1,0 +1,23 @@
+.content-toolbar {
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  .content-toolbar-c {
+    display: inherit;
+    align-items:center;
+    justify-content: center;
+    width:76%;
+  }
+}
+.REquation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.burdening {
+  .burdening-content {
+    width: 70%;
+    margin: 20px auto;
+  }
+}
+

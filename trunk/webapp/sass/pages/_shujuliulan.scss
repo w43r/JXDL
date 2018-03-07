@@ -1,0 +1,29 @@
+// 数据浏览
+.shujuliulan {
+
+  .image-group {
+    height: 380px;
+    display: inline-block;
+    padding: 10px 0 0;
+    width: 100%;
+    .image {
+      width: 50%;
+      box-sizing: border-box;
+    }
+  }
+}
+.image {
+  .buttonBox {
+    overflow: hidden;
+    margin-top: 10px;
+    margin-right: 21px;
+    .radiobutton {
+      background-color: #84cdff;
+      color: #fff;
+      text-align: center;
+      line-height: 24px;
+    }
+  }
+
+}
+

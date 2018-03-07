@@ -1,0 +1,15 @@
+/**
+ * panel样式
+ */
+
+@mixin pane {
+    display: block;
+    padding: $pane-padding;
+    border: $pane-border;
+    background-color: $color-bg;
+}
+
+
+@mixin marginOn(){
+
+}

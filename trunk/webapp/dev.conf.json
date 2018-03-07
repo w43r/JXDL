@@ -1,0 +1,14 @@
+{
+  "deploy": {
+    "/MIS": "F:/思湃德/江西动力/trunk/webapp"
+  },
+  "proxy": {
+    "/server": "http://weatherone.com.cn:8090",
+    "/SPDUser": "http://weatherone.com.cn:8090",
+    "/WMDataService": "http://weatherone.com.cn:8090",
+    "/SPDProductManager": "http://weatherone.com.cn:8090",
+    "/SurferService": "http://weatherone.com.cn:8090",
+    "/SPDCommon": "http://weatherone.com.cn:8090",
+    "/gms": "http://localhost:3080"
+  }
+}

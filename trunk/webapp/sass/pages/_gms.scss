@@ -1,0 +1,147 @@
+// 引入图标
+//@import "http://at.alicdn.com/t/font_508778_1gdqd4olfn2buik9.css";
+
+/**
+ * 格点数据监控样式
+ */
+
+$container-width: 100%;
+$container-minWidth: 780px;
+$container-maxWidth: 1600px;
+$dash-height: 90px;
+$table-height: calc(100% - #{$dash-height});
+$table-maxHeight: 600px;
+$box-size: 20px;
+$dash-card-icon-size: 75px;
+$table-border: 1px solid #ccc;
+$color-main: #fff; //color("primary");
+$color-bg: #ccc;
+.gms-monitor_container {
+  width: $container-width;
+  //min-width: $container-minWidth;
+  //max-width: $container-maxWidth;
+  padding: $box-size;
+  margin: 0 auto;
+  background-color: $color-main;
+}
+
+.gms-monitor_dash {
+  width: 100%;
+  height: $dash-height;
+  display: flex;
+  padding-bottom: $box-size;
+  .card {
+    flex: 1;
+    display: flex;
+    justify-content: left;
+    color: #fff; // 设置边距
+    &:not(:last-child) {
+      margin-right: $box-size / 2;
+    }
+    .card-icon {
+      display: flex;
+      width: $dash-card-icon-size;
+      justify-content: center;
+      align-items: center;
+      i {
+        display: block;
+        font-size: 32px;
+        margin: 0 20px;
+      }
+    }
+    .card-content {
+      flex: 1;
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      padding: 0 $box-size;
+      .main {
+        flex: 1;
+      }
+      .refresh {
+        font-size: 26px;
+        animation: spin 3s infinite linear;
+      }
+    }
+    // theme
+    &.card-info {
+      .card-icon {
+        background-color: #0071bd;
+      }
+      .card-content {
+        background-color: #29aae3;
+      }
+    }
+    &.card-danger {
+      .card-icon {
+        background-color: #921d26;
+      }
+      .card-content {
+        background-color: #a0322b;
+      }
+    }
+    &.card-success {
+      .card-icon {
+        background-color: #009345;
+      }
+      .card-content {
+        background-color: #8cc63e;
+      }
+    }
+  }
+}
+
+.gms-monitor_table {
+  position: relative;
+  width: 100%;
+  height: $table-height;
+  table {
+    table-layout: fixed;
+    max-width: none;
+    max-height: none;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    box-sizing: content-box;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-top: $table-border;
+    border-left: $table-border;
+    outline-width: 0;
+    th,
+    td {
+      border-top-width: 0;
+      border-left-width: 0;
+      border-right: $table-border;
+      border-bottom: $table-border;
+      height: 22px;
+      empty-cells: show;
+      line-height: 21px;
+      padding: 0 4px 0 4px;
+      overflow: hidden;
+      outline-width: 0;
+      white-space: pre-line;
+      text-align: center;
+      vertical-align: middle;
+    }
+    td {
+      &.warning {
+        background-color: #c2272d;
+      }
+    }
+
+    tr:hover {
+      td:first-child {
+        background-color: #445964;
+      }
+    }
+  }
+  .noData {
+    display: inline-block;
+    padding: $box-size;
+    font-size: 16px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+}

@@ -1,0 +1,74 @@
+.spdicon {
+    font-size: 12px;
+    &:before {
+        content: ' ';
+        vertical-align: middle;
+        display: inline-block;
+        background-image: url("../../imgs/sprite.svg");
+        background-repeat: no-repeat;
+        background-size: 3.3333333333333335em 66.66666666666667em;
+        // 大小一致
+        width: 3.3333333333333335em;
+        height: 3.3333333333333335em;
+    }
+    &.changeanaly:before {
+        background-position: 0em 0em;
+    }
+    &.changeanaly.active:before {
+        background-position: 0em -3.3333333333333335em;
+    }
+    &.comeval:before {
+        background-position: 0em -6.666666666666667em;
+    }
+    &.comeval.active:before {
+        background-position: 0em -10em;
+    }
+    &.login:before {
+        background-position: 0em -13.333333333333334em;
+    }
+    &.login.active:before {
+        background-position: 0em -16.666666666666668em;
+    }
+    &.meteodiss:before {
+        background-position: 0em -20em;
+    }
+    &.meteodiss.active:before {
+        background-position: 0em -23.333333333333332em;
+    }
+    &.meteoele:before {
+        background-position: 0em -26.666666666666668em;
+    }
+    &.meteoele.active:before {
+        background-position: 0em -30em;
+    }
+    &.produce:before {
+        background-position: 0em -33.333333333333336em;
+    }
+    &.produce.active:before {
+        background-position: 0em -36.666666666666664em;
+    }
+    &.rainhour:before {
+        background-position: 0em -40em;
+    }
+    &.rainhour.active:before {
+        background-position: 0em -43.333333333333336em;
+    }
+    &.retrieval:before {
+        background-position: 0em -46.666666666666664em;
+    }
+    &.retrieval.active:before {
+        background-position: 0em -50em;
+    }
+    &.setting:before {
+        background-position: 0em -53.333333333333336em;
+    }
+    &.setting.active:before {
+        background-position: 0em -56.666666666666664em;
+    }
+    &.statanaly:before {
+        background-position: 0em -60em;
+    }
+    &.statanaly.active:before {
+        background-position: 0em -63.333333333333336em;
+    }
+}

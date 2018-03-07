@@ -1,0 +1,87 @@
+/**
+ * R.pagination
+ * @author rexer
+ * @date   2016-08-15
+ */
+
+.R.pagination {
+    margin-top: 0;
+    margin-left: auto;
+    margin-bottom: 0;
+    padding: 0;
+    border: 1px solid #cdcdcd;
+    border-radius: 3px;
+}
+
+.R.pagination a {
+    font-family: Times, 'Times New Roman', Georgia, Palatino;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: calc(100%);
+    display: block;
+    float: left;
+    width: 30px;
+    height: 100%;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    color: #555;
+    border-right: 1px solid #cdcdcd;
+    border-left: 1px solid #cdcdcd;
+    outline: none;
+    background-color: #f3f3f3;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f3f3f3), color-stop(100%, lightgrey));
+    background-image: -webkit-linear-gradient(#f3f3f3, lightgrey);
+    background-image: linear-gradient(#f3f3f3, lightgrey);
+}
+
+.R.pagination a:first-child {
+    border: none;
+    border-radius: 2px 0 0 2px;
+}
+
+.R.pagination a:last-child {
+    border: none;
+    border-radius: 0 2px 2px 0;
+}
+
+.R.pagination a:hover,
+.R.pagination a:focus,
+.R.pagination a:active {
+    background-color: #cecece;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e4e4e4), color-stop(100%, #cecece));
+    background-image: -webkit-linear-gradient(#e4e4e4, #cecece);
+    background-image: linear-gradient(#e4e4e4, #cecece);
+}
+
+.R.pagination a.disabled {
+    pointer-events: none;
+}
+
+.R.pagination a.disabled,
+.R.pagination a.disabled:hover,
+.R.pagination a.disabled:focus,
+.R.pagination a.disabled:active {
+    cursor: default;
+    color: #a8a8a8;
+    background-color: #f3f3f3;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f3f3f3), color-stop(100%, lightgrey));
+    background-image: -webkit-linear-gradient(#f3f3f3, lightgrey);
+    background-image: linear-gradient(#f3f3f3, lightgrey);
+}
+
+.R.pagination input {
+    line-height: calc(100%);
+    position: relative;
+    float: left;
+    height: 100%;
+    text-align: center;
+    vertical-align: middle;
+    border: none;
+    outline: none;
+}

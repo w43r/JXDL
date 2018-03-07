@@ -1,0 +1,618 @@
+@charset "UTF-8";
+@import "variables";
+@import "components/helper";
+@import "components/mixins";
+@import "components/load6";
+@import "components/animations";
+@import "tpl";
+@import "pages";
+
+/**
+ * 主页面
+ */
+
+// 切换工具栏和条件栏
+.content {
+  .tpl-toolbar, .conditionContent {
+    display: none;
+  }
+  .tpl-content {
+    width: 100%;
+  }
+
+  // 显示工具栏时
+  &.has-toolbar {
+    .tpl-toolbar {
+      display: block;
+    }
+    &:not(.has-condition) {
+      .tpl-content {
+        width: calc(100% - #{$condition-width})
+      }
+    }
+  }
+  &.has-condition {
+    .conditionContent {
+      display: block;
+    }
+    &:not(.has-toolbar) {
+      .tpl-content {
+        width: calc(100% - #{$toolbar-width})
+      }
+    }
+  }
+  &.has-toolbar.has-condition {
+    .tpl-content {
+      width: $result-width;
+    }
+  }
+}
+
+.c {
+  // 内容
+  &.content {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-content: flex-start;
+    height: calc(100% - #{$tab-height});
+    padding: 5px;
+    background-color: $color-gray;
+    overflow: hidden;
+    // 结果页面
+    .resultContent {
+     height: 100%;
+      .resultPanel {
+        overflow-y:auto !important;
+      }
+      // width: $result-width;
+    }
+    // 条件栏
+    .conditionContent {
+      height: 100%;
+      width: $condition-width;
+      // Y轴
+      // overflow-y: auto;
+    }
+  }
+  // 全屏适配
+  &.fullScreen.content {
+    width: 100%;
+    .resultContent {
+      width: calc(100% - #{$condition-width + $toolbar-width})
+    }
+  }
+  // tab栏
+  &.banner {
+    position: relative;
+    width: 100%;
+    height: $tab-height;
+    line-height: $tab-height;
+    background-image: $gradientBlue;
+    display: flex;
+    flex-direction: row;
+    flex-grow: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow-x: hidden; //X轴
+    .menu-item {
+      min-width: $tab-width;
+      max-width: 120px;
+      height: 100%;
+      padding: 0;
+      margin: 0;
+      font-size: 14px;
+      cursor: pointer;
+      color: $color-text-fn;
+      border: none;
+      border-left: 1px solid $color-border;
+      background: none;
+      &.active,
+      &:hover {
+        background-color: $color-tab-fn;
+        // @extend .z-depth-2;
+      }
+      &:last-child {
+        border-right: 1px solid $color-border;
+      }
+    }
+  }
+}
+
+/**
+ * input样式
+ */
+
+// type=number
+.singleTime {
+  font-size: 14px;
+  width: 60px;
+  height: 25px;
+  margin-right: 5px;
+  margin-left: 5px;
+  text-align: center;
+  border: solid 1px #9ac3f3;
+  border-radius: 2px;
+}
+
+.singleTime-min {
+  @extend .singleTime;
+  width: 45px;
+}
+
+.compareTime {
+  width: 80px;
+}
+
+/**
+ * 按钮样式
+ * 继承于`.tpl-btn`
+ */
+
+// 单选按钮
+.radiobutton {
+  @extend .tpl-btn, .btn-default;
+  width: 95px;
+}
+
+// 小尺寸单选按钮
+.radiobutton-min {
+  @extend .tpl-btn, .btn-default;
+  margin: 0 5px 0 0;
+}
+
+// 复选按钮
+.checkbutton {
+  @extend .tpl-btn, .btn-primary;
+  width: 75px;
+  height: 25px;
+  margin: 5px 5px 0 0;
+  background: none;
+  &.active {
+    background: $color-btn-sm;
+    color: #000;
+  }
+}
+
+// 大尺寸按钮
+.bigBtn {
+  width: 100px;
+}
+
+// 普通按钮
+.normalBtn {
+  @extend .tpl-btn, .btn-primary;
+  font-size: 12px;
+  line-height: 25px;
+  height: 30px;
+  margin: 0 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+/**
+ * handsontable样式复写
+ */
+
+.handsontable {
+  th.highlightRow,
+  th.currentRow,
+  th.currentCol {
+    background-color: #ddd;
+  }
+  td.highlightRow,
+  td.current.highlight {
+    background: linear-gradient(to bottom, rgba(181, 209, 255, .34) 0, rgba(181, 209, 255, .34) 100%);
+    background-color: $color-bg;
+  }
+  td.highlightRow {
+    border-top: 1px solid #5292f7;
+    border-bottom: 1px solid #5292f7;
+  }
+  /*覆盖数字列居中*/
+  .htNumeric {
+    text-align: center;
+  }
+}
+
+/**
+ * 进度条动画
+ */
+
+.custom_progress {
+  position: absolute;
+  z-index: 99999;
+  top: 0;
+  display: none;
+  overflow: hidden;
+  height: 100%;
+  cursor: not-allowed;
+  text-align: center;
+  vertical-align: middle;
+  span {
+    font-family: inherit;
+    font-size: 1.2em;
+    font-weight: bold;
+    line-height: 1.2;
+    position: relative;
+    display: inline;
+    overflow: hidden;
+    white-space: nowrap;
+    color: $color-text;
+  }
+}
+
+.load-container {
+  display: block;
+  width: 180px;
+  overflow: hidden;
+  box-sizing: border-box;
+  margin-top: 66px;
+}
+
+.load-container2 {
+  display: block;
+  overflow: hidden;
+  position: absolute;
+}
+
+/**
+ * 用户模块样式
+ */
+
+#profile {
+  width: 500px;
+  margin-top: 50px;
+  input[readonly] {
+    cursor: pointer;
+    background-color: $color-bg;
+  }
+}
+
+.user-toolbar {
+  display: inline-flex;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.user-ctrl-tip {
+  line-height: 34px;
+  float: right;
+}
+
+/**
+ * 地图
+ */
+
+#map {
+  border: solid 2px $color-map-border;
+}
+
+.map-header {
+  display: inline-block;
+  width: 100%;
+  // height: 27px;
+  padding-bottom: 5px;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 20px;
+  .map.title {
+    font-weight: 600;
+  }
+}
+
+.map-wrapper {
+  width: 100%;
+  height: calc(100% - 33px); //map-header outterHeight
+}
+
+.map {
+  &.map-fluid {
+    position: relative;
+    display: block;
+    width: calc(100% - 50px); //latitude outterWidth
+    height: calc(100% - 32px); //longitude outterHeight
+    float: left;
+    box-sizing: border-box;
+  }
+  &.header {
+  }
+  /**
+   * 地图图例
+   */
+  &.legend {
+    @include pane;
+    position: absolute;
+    z-index: 9999;
+    right: 5px;
+    bottom: 15px;
+    height: 277px;
+    margin: 4px;
+    text-align: center;
+    box-sizing: content-box;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, .75);
+    cursor: default;
+    &:before {
+      content: "图例";
+      display: block;
+      font-size: 16px;
+      font-weight: 600;
+      height: 22px;
+      margin: 0 -10px 5px;
+      letter-spacing: 1em;
+      text-indent: 1em;
+      text-align: center;
+    }
+    .legend-color,
+    .legend-text {
+      position: relative;
+      float: left;
+      height: calc(100% - 27px);
+    }
+    .legend-color {
+      width: 30px;
+      cursor: pointer;
+    }
+    .legend-text {
+      display: flex;
+      flex-direction: column;
+      margin-left: 5px;
+      text-align: left;
+      pointer-events: none;
+      &.gradient {
+        justify-content: space-between;
+      }
+      &.fill {
+        justify-content: flex-start;
+      }
+      & > i {
+        font-family: arial;
+        font-style: normal;
+      }
+    }
+  }
+}
+
+/**
+ * 坐标系标注
+ */
+
+.coord {
+  margin: 0;
+  &.latitude {
+    float: left;
+    height: calc(100% - 32px);
+    flex-direction: column;
+    i {
+      display: flex;
+      line-height: 20px;
+      width: 50px;
+      height: 20px;
+      span {
+        width: 44px;
+      }
+    }
+    .symbol {
+      width: 6px;
+      height: 2px;
+      margin: 9px 0;
+    }
+  }
+  &.longitude {
+    width: calc(100% - 50px);
+    margin-left: 50px;
+    flex-direction: row;
+    i {
+      display: block;
+      height: 30px;
+      width: 46px;
+      text-align: center;
+      span {
+        width: 100%;
+      }
+    }
+    .symbol {
+      width: 2px;
+      height: 6px;
+      margin: 0 auto;
+    }
+  }
+  &.latitude,
+  &.longitude {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    .symbol {
+      background: $color-map-border;
+    }
+  }
+  & > i {
+    font-family: inherit;
+    font-weight: 600;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+}
+
+/**
+ * 配色方案选择
+ */
+
+.style-editor {
+  // 配色下拉框
+  &.select {
+    appearance: none;
+    text-shadow: 0px 1px #eee;
+    option {
+      border: 1px solid $color-bg;
+    }
+  }
+  // 单元格
+  &.cell {
+    display: inline-flex;
+    margin: 2px auto;
+  }
+  // 颜色选择器
+  .color-picker {
+    width: 170px;
+  }
+  .input-group {
+    width: 132px;
+  }
+  // 渐变色
+  &.gradient .color-value {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    border-left: none;
+    width: 75px;
+  }
+  // 填充色
+  &.fill .color-value.start {
+    border-right: none
+  }
+}
+
+/**
+ * 预警信息提示
+ */
+
+.notice-collapse {
+  position: relative;
+  margin-left: 100px;
+  &:after {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    margin-left: -2px;
+    content: ' ';
+    background: #f5f5f5;
+  }
+}
+
+/**
+ * 预警信息提示页面
+ */
+
+.warn-notice {
+  display: inline-flex;
+  width: calc(100% - 30px);
+  margin: 10px;
+  cursor: pointer;
+  vertical-align: middle;
+  color: #31708f;
+  border: 1px solid transparent;
+  border-color: #bce8f1;
+  border-radius: 4px;
+  background-color: #d9edf7;
+  &:active,
+  &:active .warn-notice-type {
+    outline: 0;
+    background-image: none;
+    -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+  }
+  &:hover {
+    color: $color-text;
+    .warn-notice-dot {
+      background: #555;
+    }
+    .warn-notice-time {
+      color: #555;
+    }
+  }
+  .warn-notice-time,
+  .warn-notice-dot {
+    position: absolute;
+    left: 0;
+  }
+  .warn-notice-dot {
+    width: 10px;
+    height: 10px;
+    margin-left: -6px;
+    border: 1px solid $color-bg;
+    border-radius: 50%;
+    background: #ccc;
+  }
+  .warn-notice-time {
+    margin-left: -85px;
+    color: #ccc;
+  }
+  .warn-notice-type {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.428571429;
+    min-width: 120px;
+    text-align: center;
+    white-space: nowrap;
+    color: #eee;
+    border-right: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #e91e63;
+    background-image: none;
+  }
+  .warn-notice-content,
+  .warn-notice-type {
+    padding: 24px 12px;
+  }
+  .warn-notice-dot {
+    margin-top: 24px;
+  }
+  .warn-notice-time {
+    margin-top: 18px;
+  }
+  .warn-notice-title:after {
+    content: '：';
+  }
+}
+
+/**
+ * 统计图公式展示
+ */
+
+.formula {
+  position: absolute;
+  // right: 30px;
+  // top: 120px;
+  font-size: 1.2em;
+  font-weight: 600;
+  z-index: 99999;
+  p {
+    margin: 0;
+  }
+}
+
+// 产品页面分页器样式复写
+#product-pager {
+  width: 222px !important;
+  input {
+    width: 100px !important;
+  }
+}
+
+.user-profile-pane,
+.user-admin-pane {
+  @extend .full;
+  @include pane;
+}
+
+.user-admin-pane {
+  padding: 0;
+  .panel-heading {
+    background: $color-bg;
+  }
+}
+
+.mask {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, .1);
+}
